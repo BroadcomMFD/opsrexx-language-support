@@ -23,7 +23,7 @@ For correct display of syntax highlighting, we recommend using OPS/REXX Language
 ### Zowe Explorer
 We recommend using Zowe Explorer to access mainframe code while using OPS/REXX Language Support. For more information about the Zowe Explorer extension, see [Zowe Explorer](https://marketplace.visualstudio.com/items?itemName=Zowe.vscode-extension-for-zowe) on the VS Code marketplace.
 
-<img src='https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/images/zowe-conformant-zowev2-explorer.png' width='20%' height='20%' alt='This extension is conformant with Zowe Explorer v2'>
+<img src='https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/docs/images/zowe-conformant-zowev2-explorer.png' width='20%' height='20%' alt='This extension is conformant with Zowe Explorer v2'>
 
 ## Using OPS/REXX Language Support with OPS/MVS
 Although it is possible to use the OPS/REXX Language Support extension without access to OPS/MVS, most users will want to use the extension while interacting with an OPS/MVS instance.  To use the OPS/REXX Language Support extension with OPS/MVS, you will need:
@@ -76,27 +76,27 @@ After completing the steps for either of the two options, you can use Zowe Explo
 ### OPS/REXX Syntax Highlighting
 Use OPS/REXX syntax highlighting and symbol resolution to help you avoid syntax errors when developing rules.
 
-![Syntax highlighting](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/images/syntax-highlighting.PNG)
+![Syntax highlighting](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/docs/images/syntax-highlighting.PNG)
 
 ### OPS/REXX Hover Insights
 Place and hold your cursor over an OPS/REXX element to view more information about it. Hover insights are available for OPS/REXX built-in functions, host environments, or AOF event variable names.
 
-![Hover Insights](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/images/gifs/hover.gif)
+![Hover Insights](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/docs/images/gifs/hover.gif)
 
 ### Variable Autocompletion
 To trigger autocompletion of AOF variables, type the `.` character after an AOF rule type stem, such as `msg.`. 
 AOF variable completions are supported for all rule types. 
 
-![AOF Variable Completion](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/images/gifs/stem-var-completion.gif)
+![AOF Variable Completion](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/docs/images/gifs/stem-var-completion.gif)
 
 Variable autocompletion is triggered automatically when you type an OPS/REXX built-in function or host environment name.
 
-![Function and Host Env Completion](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/images/gifs/basic-completion.gif)
+![Function and Host Env Completion](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/docs/images/gifs/basic-completion.gif)
 
 ### Syntax error checking
 The OPS/REXX Language Support extension automatically performs some basic error checks on AOF rule syntax, such as the line length warning shown in the following image.
 
-![Syntax Error Checking](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/images/line-too-long-error.PNG)
+![Syntax Error Checking](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/docs/images/line-too-long-error.PNG)
 
 ### Use the `OPS/MVS: Show Rule Status` command
 This feature requires an OPS/MVS connection and Zowe Explorer.
@@ -107,7 +107,7 @@ To use the `OPS/MVS: Show Rule Status` command:
 
 A request will be sent to your configured OPS `subsystem` and `ruleset` using the name of the currently open file as the rule whose status is being checked. The VS Code window will pop up with a status of `ENABLED`, `DISABLED`, or `NOT FOUND`, or an error message.
 
-![OPS/MVS: Show Rule Status](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/images/gifs/rule-status-cmd.gif)
+![OPS/MVS: Show Rule Status](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/docs/images/gifs/rule-status-cmd.gif)
 
 ### Use OPS/REXX Snippets
 Before you write AOF rules from scratch, check the snippet library for any applicable rule snippets.
@@ -119,7 +119,7 @@ To use the snippet library:
 4. Choose the type of rule snippet you want to insert.
 5. Fill in the templated values to complete the OPS/REXX rule.
 
-![Snippets](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/images/gifs/function-cmd.gif)
+![Snippets](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/docs/images/gifs/function-cmd.gif)
 
 
 For a quicker way to access the snippets:
@@ -130,7 +130,7 @@ For a quicker way to access the snippets:
  
 2. Select the suggested snippet and press Enter.
 
-![Snippets](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/images/gifs/snippet.gif)
+![Snippets](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/docs/images/gifs/snippet.gif)
 
  Using snippets promotes consistent and correct syntax in the rules you design.                                    
  ------------------------------------------------------------------------------------------------
