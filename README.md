@@ -12,7 +12,7 @@ OPS/REXX Language Support brings the following advantages to AOF rule developmen
 - Basic error checking for AOF rule syntax
 - Access to a library of useful OPS/REXX rule snippets
 
-The OPS/REXX Language Support extension does _not_ provide the ability for you to download from, upload to, or submit jobs on the mainframe. To access mainframe code while using OPS/REXX Language Support, we recommend Zowe Explorer (see [Prerequisites](#prerequisites)) or Zowe CLI.
+The OPS/REXX Language Support extension does _not_ provide the ability for you to download from, upload to, or submit jobs on the mainframe. To access mainframe code while using OPS/REXX Language Support, we recommend Zowe Explorer (see [Recommended Software](#recommended-software)) or Zowe CLI.
 
 ## Recommended Software
 The OPS/REXX Language Support extension has no prerequisite software. However, for your best experience with OPS/REXX Language Support, we recommend the following software.
