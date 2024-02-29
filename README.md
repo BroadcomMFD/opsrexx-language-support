@@ -35,7 +35,7 @@ Although it is possible to use the OPS/REXX Language Support extension without a
   - If you are using multiple OPS/MVS instances running on different systems, install and configure the Web Services component to an OPS/MVS instance on each system. One Web Services component is required for each system.   
 - For OPS/MVS release 13.5 only, PTFs SO06379 and SO06380 must be applied.
 
-- When working on OPS/REXX files, always make sure the file type is **.opsrexx** to ensure extension features are automatically enabled. For more information, see Configuring for Zowe Explorer.
+- When working on OPS/REXX files, always make sure the file type is **.opsrexx** to ensure extension features are automatically enabled. For more information, see [Configuring for Zowe Explorer](#configuring-for-zowe-explorer-recommended).
 
 ### Security
 - To issue commands from the OPS/REXX Language Support extension to OPS/MVS instances, you must be granted access to OPS/MVS resources AOF, SQL, OPSSMTBL, and OPSGLOBAL through OPS/MVS Security.
@@ -132,6 +132,7 @@ For a quicker way to access the snippets:
 
 ![Snippets](https://github.com/BroadcomMFD/opsrexx-language-support/blob/main/docs/images/gifs/snippet.gif)
 
- Using snippets promotes consistent and correct syntax in the rules you design.                                    
+ Using snippets promotes consistent and correct syntax in the rules you design.  
+ 
  ------------------------------------------------------------------------------------------------
 Copyright © 2024 Broadcom. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.
