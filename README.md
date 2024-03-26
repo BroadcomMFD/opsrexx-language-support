@@ -1,3 +1,5 @@
+[![GitHub issues](https://img.shields.io/github/issues-raw/BroadcomMFD/opsrexx-language-support)](https://github.com/BroadcomMFD/opsrexx-language-support/issues)
+
 # OPS/REXX Language Support 
 [![license](https://img.shields.io/badge/license-Broadcom-green)](/LICENSE)
 
