@@ -1,7 +1,7 @@
-[![GitHub issues](https://img.shields.io/github/issues-raw/BroadcomMFD/opsrexx-language-support)](https://github.com/BroadcomMFD/opsrexx-language-support/issues)
+[![GitHub issues](https://img.shields.io/github/issues-raw/BroadcomMFD/opsrexx-language-support)](https://github.com/BroadcomMFD/opsrexx-language-support/issues) [![license](https://img.shields.io/badge/license-Broadcom-green)](/LICENSE)
 
 # OPS/REXX Language Support 
-[![license](https://img.shields.io/badge/license-Broadcom-green)](/LICENSE)
+
 
 The OPS/REXX language is a crucial part of the Broadcom OPS/MVS® product that adds to standard REXX a set of extensions to automate and enhance the productivity of z/OS operations. With the OPS/REXX Language Support extension, automation engineers can develop OPS/MVS Automated Operations Facility (AOF) rules more efficiently by editing OPS/REXX in a local VS Code environment.
 
