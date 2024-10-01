@@ -28,7 +28,7 @@ For correct display of syntax highlighting, we recommend using OPS/REXX Language
 ### Zowe Explorer
 We recommend using Zowe Explorer to access mainframe code while using OPS/REXX Language Support. For more information about the Zowe Explorer extension, see [Zowe Explorer](https://marketplace.visualstudio.com/items?itemName=Zowe.vscode-extension-for-zowe) on the VS Code marketplace.
 
-<img src='docs/images/zowe-conformant-zowev2-explorer.png' width='20%' height='20%' alt='This extension is conformant with Zowe Explorer v2'>
+<img src='docs/images/zowe-conformant-zowev3-explorer-vs-code-color.png' width='20%' height='20%' alt='This extension is conformant with Zowe Explorer v3'>
 
 ## Using OPS/REXX Language Support with OPS/MVS
 Although it is possible to use OPS/REXX Language Support without access to OPS/MVS, most users will want to use the extension while interacting with an OPS/MVS instance. To use OPS/REXX Language Support with OPS/MVS:
@@ -193,4 +193,3 @@ After the command is issued, the VS Code window displays a status message.
 
  ------------------------------------------------------------------------------------------------
 Copyright © 2024 Broadcom. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.
-
