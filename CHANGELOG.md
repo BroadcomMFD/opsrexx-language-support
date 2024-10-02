@@ -2,6 +2,10 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.5.3` (2024-10-02)
+
+- Patch for Zowe Explorer V3 IntelliSense support
+
 ## `0.5.2` (2024-10-01)
 
 - Adds formatted compilation error messages for failed commands (View, Enable, or Disable)
