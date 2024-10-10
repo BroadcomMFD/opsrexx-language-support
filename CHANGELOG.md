@@ -2,6 +2,10 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.5.4` (2024-10-10)
+
+- Enhances documentation for Address Host Environments
+
 ## `0.5.3` (2024-10-02)
 
 - Patch for Zowe Explorer V3 IntelliSense support
