@@ -14,10 +14,9 @@ OPS/REXX Language Support makes AOF rule and OPS/REXX program development easier
 - Get hover help on OPS/REXX built-in functions, host environment names, and AOF event variable names
 - Get basic error checking for AOF rule and OPS/REXX syntax
 - Copy from a library of frequently used OPS/REXX rule snippets
-- Issue selected OPS/MVS commands
+- Issue selected OPS/MVS commands to perform common rule actions and invoke OPS/REXX programs
 
-
-The OPS/REXX Language Support extension does _not_ provide the ability for you to download from, upload to, or submit jobs on the mainframe. To access mainframe code while using OPS/REXX Language Support, we recommend Zowe Explorer (see [Recommended Software](#recommended-software)) or Zowe CLI.
+The OPS/REXX Language Support extension does _not_ provide the ability for you to download from or upload to the mainframe. To access mainframe code while using OPS/REXX Language Support, we recommend Zowe Explorer (see [Recommended Software](#recommended-software)) or Zowe CLI.
 
 ## Recommended Software
 The OPS/REXX Language Support extension has no prerequisite software. However, for your best experience with OPS/REXX Language Support, we recommend the following software.
@@ -30,49 +29,38 @@ We recommend using Zowe Explorer to access mainframe code while using OPS/REXX L
 
 <img src='docs/images/zowe-conformant-zowev3-explorer-vs-code-color.png' width='20%' height='20%' alt='This extension is conformant with Zowe Explorer v3'>
 
-## Using OPS/REXX Language Support with OPS/MVS
-Although it is possible to use OPS/REXX Language Support without access to OPS/MVS, most users will want to use the extension while interacting with an OPS/MVS instance. To use OPS/REXX Language Support with OPS/MVS:
+### OPS/MVS REST API
+We recommend establishing a connection with your mainframe OPS/MVS instance using the [OPS/MVS REST API](https://techdocs.broadcom.com/us/en/ca-mainframe-software/automation/ca-ops-mvs-event-management-and-automation/14-0/using/use-the-rest-api.html). Using the REST API along with a Zowe Explorer profile containing connection information allows you to [issue OPS/MVS commands and invoke OPS/REXX programs](#issuing-opsmvs-commands) from within VS Code.
 
-1. Ensure that your instance of OPS/MVS is configured with _one_ of the following components:
+## Configuring OPS/REXX Language Support for OPS/MVS
+Although it is possible to use OPS/REXX Language Support without access to OPS/MVS, most users will want to use the extension while interacting with an OPS/MVS instance. To configure OPS/REXX Language Support for use with OPS/MVS:
 
-   - The REST API (OPSREST) 
-   - RESTful Web Services (OPSWS)
+1. Ensure that your instance of OPS/MVS is configured with the OPS/MVS REST API (OPSREST) component.
 
-2. In the OPS/REXX Language Support extension settings, specify the following parameters:
-   
-    **REST API**
-     - If you are using the extension with the OPS/MVS REST API, activate the check box to set the value of this parameter to `true`.
-     - If you are using the extension with OPS/MVS RESTful Web Services, deactivate the check box to set the value of this parameter to `false`.
-   
-    **Rule Set**
-  
-     Specify the default working rule set for the OPS/MVS instance you are using.
-      
-    **Subsystem**
-   
-     Specify the default subsystem for the OPS/MVS instance you are using.
+2. In the OPS/REXX Language Support extension settings, set the `Subsystem` parameter to the default subsystem for the OPS/MVS instance you are using. If you want, you may also set default values for your program command parameters.
 
 3. Create a team configuration file containing the connection information for the OPS/MVS instance you would like to connect to. Use _one_ of the following methods:
 
    - [Use Zowe Explorer](https://docs.zowe.org/stable/user-guide/ze-profiles) to create a team configuration file.  Provide the following information:
    
-     - The host name of the LPAR on which the REST API or RESTful Web Services is running.
-     - The port number for the REST API or RESTful Web Services.
-     - A username that has authority to access the REST API or RESTful Web Services.
+     - The host name of the LPAR on which the REST API is running.
+     - The port number for the REST API.
+     - A username that has authority to access the REST API.
      - The password to the account that is associated with the username.
     
-   - Follow [these steps](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/enterprise-support-for-zowe/1-0/using/zowe-cli/available-cli-plug-ins/ca-ops-mvs-plug-in-for-zowe-cli.html) to manually create a team configuration file.
+   - Follow [these steps](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/enterprise-support-for-zowe/1-0/zowe-cli/using-zowe-cli/available-cli-plug-ins/ca-ops-mvs-plug-in-for-zowe-cli.html#concept.dita_6781dd15fcd0eeb42754d0b2d929ef4b29d06c30_CreateAnOPSMVSProfile) to manually create a team configuration file.
     
-4. When working with OPS/REXX files, ensure their file extension is `.opsrexx` to automatically enable OPS/REXX Language Support Extension features. For more information, see [Configuring for Zowe Explorer](#configuring-for-zowe-explorer-recommended).
+
+4. When you are working with OPS/REXX files, ensure their file extension is `.opsrexx` to automatically enable OPS/REXX Language Support Extension features. For more information, see [Configuring OPS/REXX Language Support for Zowe Explorer](#configuring-opsrexx-language-support-for-zowe-explorer-recommended).
 
 ### Using OPS/REXX Language Support with multiple OPS/MVS instances
-- If you are using the extension with multiple OPS/MVS instances running on different systems, install and configure OPS/MVS RESTful Web Services or the OPS/MVS REST API on each system in your OPSplex. One instance of RESTful Web Services or the REST API is required for each system.
-- When you have multiple instances of OPS/MVS running on a single system, only one instance of RESTful Web Services or the REST API is required.
+- If you are using the OPS/REXX Language Support extension with multiple OPS/MVS instances running on different systems, install and configure the OPS/MVS REST API on each system in your OPSplex. One instance of the REST API is required for each system.
+- When you have multiple instances of OPS/MVS running on a single system, only one instance of the REST API is required.
    
-## Configuring for Zowe Explorer (Recommended)
+## Configuring OPS/REXX Language Support for Zowe Explorer (Recommended)
 To ensure that data sets accessed through Zowe Explorer are recognized by the extension as **.opsrexx** files, you must create a file association in your VS Code settings.
 
-To create a file association, use one of the following options.
+To create a file association, choose one of the following options.
 
 **Option 1: Create a file association in Workspace Settings**     
 1. Use the command palette in VS Code (**Ctrl/Cmd + Shift + P**) to locate the Workspace Settings.
@@ -91,7 +79,7 @@ To create a file association, use one of the following options.
           },
       ``` 
 
-After completing the steps for either of the two options, you can use Zowe Explorer to access `.opsrexx` files.
+After completing the steps for either of these two options, you can use Zowe Explorer to access `.opsrexx` files.
 
 ## Using OPS/REXX Language Support
 
@@ -106,7 +94,8 @@ Place and hold your cursor over an OPS/REXX element to view more information abo
 ![Hover Insights](docs/images/gifs/hover.gif)
 
 ### Variable Autocompletion
-To trigger autocompletion of AOF variables, type `.` after an AOF rule type stem, such as `msg.`.
+To trigger autocompletion of AOF variables, type `.` after an AOF rule type stem, for example: `msg.`
+
 AOF variable completions are supported for all rule types.
 
 ![AOF Variable Completion](docs/images/gifs/stem-var-completion.gif)
@@ -121,16 +110,17 @@ OPS/REXX Language Support automatically performs some basic error checks on AOF 
 ![Syntax Error Checking](docs/images/line-too-long-error.PNG)
 
 ### Using OPS/REXX Snippets
-Before you write AOF rules from scratch, check the snippet library for any applicable rule snippets.
+Using snippets promotes consistent and correct syntax in the rules you design. Before you write AOF rules from scratch, check the snippet library for any applicable rule snippets.
+
 To use the snippet library:
 
 1. Open the VS Code command palette by pressing `Ctrl/Cmd + Shift + P`.
 2. Type `Insert Snippet`.
-3. Click the command or press Enter.
+3. Click the command or press **Enter**.
 4. Choose the type of rule snippet you want to insert.
 5. Fill in the templated values to complete the OPS/REXX rule.
 
-![Snippets](docs/images/gifs/function-cmd.gif)
+![Snippets](docs/images/gifs/insert-snippet-cmd.gif)
 
 
 For a quicker way to access the snippets:
@@ -139,45 +129,38 @@ For a quicker way to access the snippets:
  
    VS Code autocomplete suggests the full name of the snippet.
  
-2. Select the suggested snippet and press Enter.
+2. Select the suggested snippet and press **Enter**.
 
 ![Snippets](docs/images/gifs/snippet.gif)
 
-Using snippets promotes consistent and correct syntax in the rules you design.
 
 ### Issuing OPS/MVS Commands
-To issue OPS/MVS commands through OPS/REXX Language Support, you need an OPS/MVS RESTful Web Services or REST API connection. Configure the OPS/REXX Language Support extension for the connection as described in [Using OPS/REXX Language Support with OPS/MVS](#using-opsrexx-language-support-with-opsmvs).
- 
-If you are using Zowe Explorer (optional) to issue commands, configure the extension as described in [Configuring for Zowe Explorer](#configuring-for-zowe-explorer-recommended).
+To issue OPS/MVS commands from OPS/REXX Language Support, you need an OPS/MVS REST API connection. Configure the OPS/REXX Language Support extension for the connection as described in [Configuring OPS/REXX Language Support for OPS/MVS](#configuring-opsrexx-language-support-for-opsmvs).
 
 You can use OPS/REXX Language Support to issue the following OPS/MVS commands:
 
   - `Show Rule Status` - Shows the status of a selected rule.   
   - `Enable Rule` - Enables a selected rule.
   - `Disable Rule` - Disables a selected rule.
+  - `Execute Program` - Executes a selected OPS/REXX program using your default OPS/MVS subsystem.
+  - `Execute Program with Parameters` - Executes an OPS/REXX program that you choose by typing parameters into an input form.
 
 To issue OPS/MVS commands, use one of the following methods.
 
 #### Option 1
-1. In the File Explorer sidebar of the VS Code application window, browse for and open the file containing the rule you want.
+1. In the Zowe Explorer sidebar of the VS Code application window, browse for and open the file containing the rule or program you want.
 2. Type `Ctrl/Cmd + Shift + P` to open the VS Code command palette.
-3. Select the command you want from the menu: **OPS/MVS: Show Rule Status**, **OPS/MVS: Enable Rule**, or **OPS/MVS: Disable Rule**. 
+3. Select the command you want from the menu.  
+
+**Tip:** The **OPS/MVS: Execute Program with Parameters** command can be used from the VS Code command palette regardless of which file is currently open.
 
 #### Option 2
-1. In the File Explorer sidebar of the VS Code application window, right-click on the icon representing the rule you want.
-2. From the pop-up menu, select the command you want: **OPS/MVS: Show Rule Status**, **OPS/MVS: Enable Rule**, or **OPS/MVS: Disable Rule**.
-  
-After the command is issued, the VS Code window displays a status message. 
-  
-  - If the `Show Rule Status` command succeeds, the rule status displays (`ENABLED` or `DISABLED`).
-    
-  - If the `Enable Rule` command succeeds, the original status (`DISABLED`) displays, followed by the new status (`ENABLED`).
-    
-  - If the `Disable Rule` command succeeds, the original status (`ENABLED`) displays, followed by the new status (`DISABLED`).
-    
-  - If a command fails, an error message or the message `NOT FOUND` displays.
+1. In the Zowe Explorer sidebar of the VS Code application window, right-click on the icon representing the rule or program you want.
+2. From the pop-up menu, select the command you want.  
+
+After a command is issued, the VS Code window displays a status message. If a command fails, a detailed error message displays.
  
- **Tip:** If you are using OPS/REXX Language Support with Zowe Explorer, you can use option 1 or option 2 from the Zowe Explorer sidebar in the VS Code application window. See the following videos for demonstrations.
+See the following videos for examples of issuing commands.
  
 **Show Rule Status (Option 1)**
 ![OPS/MVS: Show Rule Status using command palette](docs/images/gifs/rule-status-cmdp.gif)
@@ -185,11 +168,25 @@ After the command is issued, the VS Code window displays a status message.
 **Enable Rule (Option 2)**
 ![OPS/MVS: Enable Rule with Right Click](docs/images/gifs/enable-rule-rc.gif)
 
-**Disable Rule (Option 2)**
-![OPS/MVS: Disable Rule with Right Click](docs/images/gifs/disable-rule-rc.gif)
+**Execute Program (Option 2)**
+![OPS/MVS: Execute Program using command palette](docs/images/gifs/execute-program-rc.gif)
 
+**Execute Program with Parameters (Key binding `Ctrl + Shift + E`)**
+![OPS/MVS: Execute Program with Parameters using key binding](docs/images/gifs/execute-program-w-param-hotkey.gif)
 
+### Use Case Videos: Using OPS/MVS Automation Samples
+You can use Zowe Explorer to copy OPS/MVS automation samples to your own library, then use the OPS/MVS Language Extension to develop and manage the samples. See the following videos for examples of this use case.
 
+You can find a complete listing of the automation samples included with OPS/MVS [here](https://techdocs.broadcom.com/us/en/ca-mainframe-software/automation/ca-ops-mvs-event-management-and-automation/14-0/reference-information/sample-automation.html).
+
+#### Copy and execute an OPS/MVS sample program
+![Copy and execute an OPS/MVS sample program](docs/images/gifs/copy-sample-and-run.gif)
+
+#### Copy an OPS/MVS sample program and execute it with parameters
+![Copy an OPS/MVS sample program and execute it with parameters](docs/images/gifs/copy-sample-and-run-w-parameters.gif)
+
+#### Copy an OPS/MVS sample rule and enable it
+![Copy an OPS/MVS sample rule and enable it](docs/images/gifs/copy-sample-rule-and-enable.gif)
 
  ------------------------------------------------------------------------------------------------
 Copyright © 2024 Broadcom. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.
