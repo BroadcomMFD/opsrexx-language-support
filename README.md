@@ -14,7 +14,7 @@ OPS/REXX Language Support makes AOF rule and OPS/REXX program development easier
 - Get hover help on OPS/REXX built-in functions, host environment names, and AOF event variable names
 - Get basic error checking for AOF rule and OPS/REXX syntax
 - Copy from a library of frequently used OPS/REXX rule snippets
-- Issue selected OPS/MVS commands to perform common rule actions and invoke OPS/REXX programs
+- Issue selected OPS/MVS commands to perform common rule actions and execute OPS/REXX programs
 
 The OPS/REXX Language Support extension does _not_ provide the ability for you to download from or upload to the mainframe. To access mainframe code while using OPS/REXX Language Support, we recommend Zowe Explorer (see [Recommended Software](#recommended-software)) or Zowe CLI.
 
@@ -58,28 +58,19 @@ Although it is possible to use OPS/REXX Language Support without access to OPS/M
 - When you have multiple instances of OPS/MVS running on a single system, only one instance of the REST API is required.
    
 ## Configuring OPS/REXX Language Support for Zowe Explorer (Recommended)
-To ensure that data sets accessed through Zowe Explorer are recognized by the extension as **.opsrexx** files, you must create a file association in your VS Code settings.
+OPS/REXX programs and rules will be automatically recognized as `.opsrexx` files upon opening in VS Code when the first line of the file contains either the comment `/* OPSREXX */` or a rule type identifier, such as `)CMD` or `)MSG` (case-insensitive).
 
-To create a file association, choose one of the following options.
+To ensure that data sets not containing those first lines and accessed through Zowe Explorer are recognized by the extension as **.opsrexx** files, you must create a file association in your VS Code settings.
 
-**Option 1: Create a file association in Workspace Settings**     
-1. Use the command palette in VS Code (**Ctrl/Cmd + Shift + P**) to locate the Workspace Settings.
-2. Scroll down to the **Files: Associations** setting and click **Add Item**.
-3. Add `*.REXX(*` to the **Key** field, and `opsrexx` to the **Value** field.
-4. Add `*.RULES(*` to the **Key** field, and `opsrexx` to the **Value** field.
+To create a file association:
 
-**Option 2: Create a file association in User Settings**
-1. Use the command palette in VS Code (**Ctrl/Cmd + Shift + P**) to locate the file `settings.json` (User Settings).
-2. In `settings.json`, add the lines `"*.REXX(*": "opsrexx"` and `"*.RULES(*": "opsrexx"` under `"files.associations"` as shown in the following example:
-  
-      ```
-          "files.associations": {
-              "*.REXX(*": "opsrexx",
-              "*.RULES(*": "opsrexx",
-          },
-      ``` 
+1. On the VS Code menu bar, click `File`, `Preferences`, and click `Settings` to display the Settings editor.
+2. Select the `User` or `Workspace` tab, depending on which settings you want to update (`User` settings are your personal settings for customizing VS Code and apply to all files globally, `Workspace` settings are specific to a project and override user settings. Check the [VS Code documentation](https://code.visualstudio.com/docs/getstarted/settings) for more information).
+3. Scroll down to or search for the **Files: Associations** setting and click **Add Item**.
+4. Add `**/*QUALIFIER*{,/*}` to the **Key** field, and `opsrexx` to the **Value** field where `QUALIFIER` is the portion of the fully qualified data set path you want to be automatically set as an OPS/REXX file type.
+    - For example, if you have a fully qualified data set called `OPSS.CCLXSAMP.SAMPLE.RULES`, you could put `**/*RULES*{,/*}` or `**/*CCLXSAMP*{,/*}` in the **key** field to automatically associate all files in any data set with the matching qualifier.
 
-After completing the steps for either of these two options, you can use Zowe Explorer to access `.opsrexx` files.
+After completing these steps, you can use Zowe Explorer to access `.opsrexx` files.
 
 ## Using OPS/REXX Language Support
 
