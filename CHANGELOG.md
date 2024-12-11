@@ -2,6 +2,11 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.6.1` (2024-12-11)
+
+- Updates README file association instructions
+- adds first line check for `/* OPSREXX */` syntax
+
 ## `0.6.0` (2024-11-22)
 
 - Adds the ability to issue the following commands via the OPS/MVS REST API with [@broadcom/ops-for-zowe-cli](https://www.npmjs.com/package/@broadcom/ops-for-zowe-cli):
