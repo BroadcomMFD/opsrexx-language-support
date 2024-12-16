@@ -2,6 +2,10 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.6.2` (2024-12-16)
+
+- bug fix
+
 ## `0.6.1` (2024-12-11)
 
 - Updates README file association instructions
