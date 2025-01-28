@@ -2,6 +2,11 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.6.3` (2025-01-28)
+
+- bug fix for ARM rule auto-recognition
+- Updates dependencies to maintain technical currency
+  
 ## `0.6.2` (2024-12-16)
 
 - bug fix
