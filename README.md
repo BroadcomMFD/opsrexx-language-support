@@ -14,7 +14,7 @@ OPS/REXX Language Support makes AOF rule and OPS/REXX program development easier
 - Get hover help on OPS/REXX built-in functions, host environment names, and AOF event variable names
 - Get basic error checking for AOF rule and OPS/REXX syntax
 - Copy from a library of frequently used OPS/REXX rule snippets
-- Issue selected OPS/MVS commands to perform common rule actions and execute OPS/REXX programs
+- Issue selected OPS/MVS commands to perform common rule actions, search OPSLOG records, and execute OPS/REXX programs
 
 The OPS/REXX Language Support extension does _not_ provide the ability for you to download from or upload to the mainframe. To access mainframe code while using OPS/REXX Language Support, we recommend Zowe Explorer (see [Recommended Software](#recommended-software)) or Zowe CLI.
 
@@ -43,10 +43,10 @@ Although it is possible to use OPS/REXX Language Support without access to OPS/M
 
    - [Use Zowe Explorer](https://docs.zowe.org/stable/user-guide/ze-profiles) to create a team configuration file.  Provide the following information:
    
-     - The host name of the LPAR on which the REST API is running.
-     - The port number for the REST API.
-     - A username that has authority to access the REST API.
-     - The password to the account that is associated with the username.
+     - The host name of the LPAR on which the REST API is running
+     - The port number for the REST API
+     - A username that has authority to access the REST API
+     - The password to the account that is associated with the username
     
    - Follow [these steps](https://techdocs.broadcom.com/us/en/ca-mainframe-software/devops/enterprise-support-for-zowe/1-0/zowe-cli/using-zowe-cli/available-cli-plug-ins/ca-ops-mvs-plug-in-for-zowe-cli.html#concept.dita_6781dd15fcd0eeb42754d0b2d929ef4b29d06c30_CreateAnOPSMVSProfile) to manually create a team configuration file.
     
@@ -64,11 +64,15 @@ To ensure that data sets not containing those first lines and accessed through Z
 
 To create a file association:
 
-1. On the VS Code menu bar, click `File`, `Preferences`, and click `Settings` to display the Settings editor.
-2. Select the `User` or `Workspace` tab, depending on which settings you want to update (`User` settings are your personal settings for customizing VS Code and apply to all files globally, `Workspace` settings are specific to a project and override user settings. Check the [VS Code documentation](https://code.visualstudio.com/docs/getstarted/settings) for more information).
+1. On the VS Code menu bar, select **File > Preferences > Settings** to display the Settings editor.
+2. Select the **User** or **Workspace** tab, depending on which settings you want to update.
+**Tip:** **User** settings are your personal settings for customizing VS Code and apply to all files globally. **Workspace** settings are specific to a project and override user settings. For more information, see the [VS Code documentation](https://code.visualstudio.com/docs/getstarted/settings).
 3. Scroll down to or search for the **Files: Associations** setting and click **Add Item**.
-4. Add `**/*QUALIFIER*{,/*}` to the **Key** field, and `opsrexx` to the **Value** field where `QUALIFIER` is the portion of the fully qualified data set path you want to be automatically set as an OPS/REXX file type.
-    - For example, if you have a fully qualified data set called `OPSS.CCLXSAMP.SAMPLE.RULES`, you could put `**/*RULES*{,/*}` or `**/*CCLXSAMP*{,/*}` in the **key** field to automatically associate all files in any data set with the matching qualifier.
+4. Enter `**/*QUALIFIER*{,/*}` in the **Key** field, where `QUALIFIER` is the portion of the fully qualified data set path you want to be automatically set as an OPS/REXX file type.
+\
+For example, if you have a fully qualified data set called `OPSS.CCLXSAMP.SAMPLE.RULES`, you could put `**/*RULES*{,/*}` or `**/*CCLXSAMP*{,/*}` in the **Key** field to automatically associate all files in any data set with the matching qualifier.
+5. Enter `opsrexx` in the **Value** field.
+
 
 After completing these steps, you can use Zowe Explorer to access `.opsrexx` files.
 
@@ -135,6 +139,7 @@ You can use OPS/REXX Language Support to issue the following OPS/MVS commands:
   - `Disable Rule` - Disables a selected rule.
   - `Execute Program` - Executes a selected OPS/REXX program using your default OPS/MVS subsystem.
   - `Execute Program with Parameters` - Executes an OPS/REXX program that you choose by typing parameters into an input form.
+  - `Search OPSLOG Records` - Provides a table of OPSLOG records that match your specified search parameters.
 
 To issue OPS/MVS commands, use one of the following methods.
 
@@ -157,13 +162,19 @@ See the following videos for examples of issuing commands.
 ![OPS/MVS: Show Rule Status using command palette](docs/images/gifs/rule-status-cmdp.gif)
 
 **Enable Rule (Option 2)**
-![OPS/MVS: Enable Rule with Right Click](docs/images/gifs/enable-rule-rc.gif)
+![OPS/MVS: Enable Rule with right click](docs/images/gifs/enable-rule-rc.gif)
 
 **Execute Program (Option 2)**
-![OPS/MVS: Execute Program using command palette](docs/images/gifs/execute-program-rc.gif)
+![OPS/MVS: Execute Program using right click](docs/images/gifs/execute-program-rc.gif)
 
 **Execute Program with Parameters (Key binding `Ctrl + Shift + E`)**
 ![OPS/MVS: Execute Program with Parameters using key binding](docs/images/gifs/execute-program-w-param-hotkey.gif)
+
+**Search OPSLOG Records for specified text (Option 1)**
+![OPS/MVS: Search OPSLOG Records with search term](docs/images/gifs/opslog-search-term.gif)
+
+**Search OPSLOG Records for most recent records (Option 1)**
+![OPS/MVS: Search OPSLOG Records without search term](docs/images/gifs/opslog-search-empty.gif)
 
 ### Use Case Videos: Using OPS/MVS Automation Samples
 You can use Zowe Explorer to copy OPS/MVS automation samples to your own library, then use the OPS/MVS Language Extension to develop and manage the samples. See the following videos for examples of this use case.
@@ -180,4 +191,4 @@ You can find a complete listing of the automation samples included with OPS/MVS 
 ![Copy an OPS/MVS sample rule and enable it](docs/images/gifs/copy-sample-rule-and-enable.gif)
 
  ------------------------------------------------------------------------------------------------
-Copyright © 2024 Broadcom. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.
+Copyright © 2025 Broadcom. The term "Broadcom" refers to Broadcom Inc. and/or its subsidiaries.
