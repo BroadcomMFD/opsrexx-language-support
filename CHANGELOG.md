@@ -2,19 +2,27 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.7.0` (2025-04-24)
+
+- Adds the ability to issue the following command via the OPS/MVS REST API with [@broadcom/ops-for-zowe-cli](https://www.npmjs.com/package/@broadcom/ops-for-zowe-cli):
+    - `Search OPSLOG Records`
+- Improved error handling and messages for OPS/MVS REST API connection and configuration issues
+- Bug fix for program name encoding
+- Updates dependencies to maintain technical currency
+
 ## `0.6.3` (2025-01-28)
 
-- bug fix for ARM rule auto-recognition
+- Bug fix for ARM rule auto-recognition
 - Updates dependencies to maintain technical currency
-  
+
 ## `0.6.2` (2024-12-16)
 
-- bug fix
+- Bug fix
 
 ## `0.6.1` (2024-12-11)
 
 - Updates README file association instructions
-- adds first line check for `/* OPSREXX */` syntax
+- Adds first line check for `/* OPSREXX */` syntax
 
 ## `0.6.0` (2024-11-22)
 
