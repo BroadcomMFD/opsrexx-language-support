@@ -2,6 +2,11 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.7.1` (2025-05-23)
+
+- Fixes bug with `Search OPSLOG Records` where deselected columns in the table do not disappear
+- Fixes bug with `Search OPSLOG Records` where text searches in the `JOB NAME` column did not work
+
 ## `0.7.0` (2025-04-24)
 
 - Adds the ability to issue the following command via the OPS/MVS REST API with [@broadcom/ops-for-zowe-cli](https://www.npmjs.com/package/@broadcom/ops-for-zowe-cli):
