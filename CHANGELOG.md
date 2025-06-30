@@ -2,6 +2,10 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.7.2` (2025-06-30)
+- Updates dependencies to maintain technical currency
+- Adds support for OPS/REXX built-in function `OPSHRVAR`
+
 ## `0.7.1` (2025-05-23)
 
 - Fixes bug with `Search OPSLOG Records` where deselected columns in the table do not disappear
