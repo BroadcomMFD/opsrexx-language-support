@@ -2,6 +2,9 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.7.3` (2025-07-02)
+- Updates README
+
 ## `0.7.2` (2025-06-30)
 - Updates dependencies to maintain technical currency
 - Adds support for OPS/REXX built-in function `OPSHRVAR`
