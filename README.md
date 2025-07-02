@@ -150,15 +150,16 @@ You can use OPS/REXX LS to issue the following OPS/MVS commands:
   - `Disable Rule` - Disables a selected rule.
   - `Execute Program` - Executes a selected OPS/REXX program using your default OPS/MVS subsystem.
   - `Execute Program with Parameters` - Executes an OPS/REXX program that you choose by typing parameters into an input form.
+  - `Search OPSLOG Records` - Provides a table of OPSLOG records that match your specified search parameters.
 
 With a data set that contains OPS/REXX rules open in the Zowe Explorer sidebar, to issue OPS/MVS commands:
   1. Right-click the data set member that contains the OPS/REXX rule or program in the Zowe Explorer sidebar. 
   2. Select the command from the OPS/REXX menu.
 
-You can also issue commands for an open OPS/REXX rule or program by using the VS Code Command Pallet (`Ctrl+Shift+P`).
+You can also issue commands for an open OPS/REXX rule or program by using the VS Code Command Palette (`Ctrl+Shift+P`).
 
 > **Tip**  
-> You can use the **OPS/MVS: Execute Program with Parameters** command from the VS Code Command Palette regardless of which file is currently open and can be accessed using the keyboard shortcut `Ctrl+Shift+E`.
+> You can use the keyboard shortcut `Ctrl+Shift+E` to issue the **OPS/MVS: Execute Program with Parameters** command from the VS Code Command Palette regardless of which file is currently open.
 
 After a command is issued, the VS Code window displays a status message. If a command fails, a detailed error message displays.
 
@@ -168,12 +169,26 @@ The right-click menu provides quick access to OPS/MVS commands from the Zowe Exp
 
 ![OPS/MVS: Enable Rule with Right Click](docs/images/gifs/enable-rule-rc.gif)
 
-**Issue the Execute Program with Parameters Command**
+**Issue the Execute Program with Parameters Command**ok
 
-Use the Command Pallet to execute OPS/MVS programs that require parameter input.
+Use the Command Palette to execute OPS/MVS programs that require parameter input.
 
 ![OPS/MVS: Execute Program with Parameters using key binding](docs/images/gifs/execute-program-w-param-hotkey.gif)
 
+**Search OPSLOG Records**
+
+Use the **OPS/MVS: Search OPSLOG Records** command to search the live OPSLOG.
+
+You can specify parameters to search for specific text in the OPSLOG.
+
+![OPS/MVS: Search OPSLOG Records with search term](docs/images/gifs/opslog-search-term.gif)
+
+If you select **Submit Search** without specifying parameters, you can browse the most recent records or the oldest records from the specified OPSLOG.
+
+![OPS/MVS: Search OPSLOG Records without search term](docs/images/gifs/opslog-search-empty.gif)
+
+> **Tip**  
+> To select a different OPSLOG to search, select **OPS/MVS: Search OPSLOG Records > Search Settings > Log Name**.
 ---
 
 ### OPS/MVS Automation Samples
