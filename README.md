@@ -1,6 +1,8 @@
 # OPS/REXX Language Support 
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/BroadcomMFD/opsrexx-language-support)](https://github.com/BroadcomMFD/opsrexx-language-support/issues)
+[![Code4z](https://img.shields.io/badge/Code4z-marketplace-cc092f)](https://marketplace.visualstudio.com/search?term=code4z&target=VSCode)
+
 
 The OPS/REXX language is a crucial part of the Broadcom OPS/MVS® product that adds to standard REXX a set of extensions to automate and enhance the productivity of z/OS operations. With the OPS/REXX Language Support extension (OPS/REXX LS), automation engineers can develop OPS/MVS Automated Operations Facility (AOF) rules and OPS/REXX programs more efficiently by editing OPS/REXX in a local VS Code environment.
 
@@ -11,11 +13,17 @@ OPS/REXX LS includes the following features:
 - Autocompletion for OPS/REXX built-in functions, host environment names, and AOF event variables
 - Basic error checking for AOF rules and OPS/REXX syntax
 - A library of frequently used OPS/REXX rule snippets
-- If configured, specific OPS/MVS commands can be run to perform common rule actions and execute OPS/REXX programs
+- If configured, specific OPS/MVS commands can be run to perform common rule actions, search OPSLOG records, and execute OPS/REXX programs
 
 We encourage you to share ideas to help improve OPS/REXX Language Support. You can also report issues in the extension, using the following link.
 
 > [Share an idea or open an issue in our Git repository](https://github.com/BroadcomMFD/opsrexx-language-support/issues)
+
+<img align="left" alt="This extension is part of the Code4z experience" width="80" height="82" src="https://raw.githubusercontent.com/BroadcomMFD/code4z/refs/heads/main/icon5.png" />
+
+OPS/REXX LS is part of the [Code4z](https://techdocs.broadcom.com/code4z) experience from Broadcom, which offers a modern experience for mainframe application developers. To get started with Code4z, check out our foundational [extension pack](https://marketplace.visualstudio.com/items?itemName=broadcomMFD.code4z-extension-pack).
+
+<br />
 
 ## Address Software Requirements
 OPS/REXX LS requires no prerequisite software.
@@ -169,7 +177,7 @@ The right-click menu provides quick access to OPS/MVS commands from the Zowe Exp
 
 ![OPS/MVS: Enable Rule with Right Click](docs/images/gifs/enable-rule-rc.gif)
 
-**Issue the Execute Program with Parameters Command**ok
+**Issue the Execute Program with Parameters Command**
 
 Use the Command Palette to execute OPS/MVS programs that require parameter input.
 
@@ -209,7 +217,7 @@ The extensions for Visual Studio Code developed by Broadcom Inc., including its 
 ### Technical Assistance and Support
 OPS/REXX Language Support is made available to customers on the Visual Studio Code Marketplace in accordance with the terms and conditions contained in the provided End-User License Agreement (EULA).
 
-If you are on active support for OPS/MVS, you get technical assistance and support in accordance with the terms, guidelines, details, and parameters that are located within the Broadcom Working with Support guide.
+If you are on active support for OPS/MVS, you get technical assistance and support in accordance with the terms, guidelines, details, and parameters that are located within the Broadcom [Working with Support](https://support.broadcom.com/external/content/release-announcements/CA-Support-Policies/6933) guide.
 
 This support generally includes:
 
