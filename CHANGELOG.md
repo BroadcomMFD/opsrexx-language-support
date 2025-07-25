@@ -2,6 +2,9 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.7.4` (2025-07-25)
+- Updates README
+
 ## `0.7.3` (2025-07-02)
 - Updates README
 
