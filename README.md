@@ -26,7 +26,7 @@ OPS/REXX LS is part of the [Code4z](https://techdocs.broadcom.com/code4z) experi
 <br />
 
 ## Address Software Requirements
-OPS/REXX LS requires no prerequisite software.
+OPS/REXX LS has no prerequisite software.
 
 Use the following recommended software with OPS/REXX LS for the best experience:
 - REXX Language Support Extension
@@ -60,7 +60,7 @@ Establish a connection with your mainframe OPS/MVS instance using the OPS/MVS RE
      - The port number for the REST API.
      - A username that has authority to access the REST API.
      - The password to the account that is associated with the username.
-    - [Manually create a team configuration file](https://techdocs.broadcom.com/us/en/ca-mainframe-software/automation/ca-ops-mvs-event-management-and-automation/14-0/installing/complete-configuration-tasks/integrate-with-zowe-cli.html#_3e6293fe-6d17-4652-afec-833084986884_section_3) using the same required information, as described in the OPS/MVS documentation.
+    - [Manually create a team configuration file](https://techdocs.broadcom.com/us/en/ca-mainframe-software/automation/ca-ops-mvs-event-management-and-automation/14-0/installing/complete-configuration-tasks/configure-the-rest-api/integrate-with-zowe-cli.html#:~:text=Verify%20the%20Configuration.-,Update%20Team%20Configuration%20Manually,-Create%20a%20plug) using the same required information, as described in the OPS/MVS documentation.
 
 <!-- Needs a verification step -->
 
@@ -77,7 +77,7 @@ OPS/REXX LS is Zowe Explorer V3 Conformant. The Zowe Conformance Program ensures
 **Configure OPS/REXX LS for Use with Zowe Explorer**
 <!-- Actual procedure is a good Walkthrough candidate. Actually describing steps to associate a data set and its members as opsrexx files -->
 
-To ensure that data sets not containing those first lines and accessed through Zowe Explorer are recognized by the extension as **.opsrexx** files, you must create a file association in your VS Code settings to associate data sets that contain OPS/REXX rules with the `.opsrexx` file extension.
+To ensure that all OPS/REXX programs and rules are recognized by OPS/REXX LS as `.opsrexx` files, you must create a file association in your VS Code settings to associate data sets that contain OPS/REXX rules with the `.opsrexx` file extension.
 
 To create a file association for a data set:
 
