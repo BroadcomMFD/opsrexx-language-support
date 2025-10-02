@@ -2,6 +2,12 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.7.5` (2025-10-02)
+- Updates README
+- Bug fix for first line sequence number diagnostics
+- Bug fix for line length diagnostics
+- Updates dependencies to maintain technical currency
+
 ## `0.7.4` (2025-07-25)
 - Updates README
 
@@ -159,3 +165,4 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 ## `0.1.0`
 
 - Initial release to Broadcom Validate
+
