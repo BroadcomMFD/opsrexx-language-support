@@ -2,6 +2,10 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.7.6` (2025-12-01)
+- Updates dependencies to maintain technical currency
+- Remediates CVE: [2025-64718](https://nvd.nist.gov/vuln/detail/CVE-2025-64718)
+
 ## `0.7.5` (2025-10-02)
 - Updates README
 - Bug fix for first line sequence number diagnostics
@@ -165,4 +169,5 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 ## `0.1.0`
 
 - Initial release to Broadcom Validate
+
 
