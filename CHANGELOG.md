@@ -2,6 +2,21 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.8.0` (2025-12-22)
+- Updates dependencies to maintain technical currency
+- Introduces SSH connection feature
+- Adds the ability to issue the following commands via the OPS/MVS REST API and SSH connection:
+    - `Set Auto Enable`
+    - `Reset Auto Enable`
+- Adds the commands:
+    - `Rule Facility`
+    - `Deploy Backend`
+    - `Create or Modify OPS/REXX LS SSH Connection Profiles`
+- Adds the user settings:
+    - `Connection Mode`
+    - `Preferred Connection Order`
+    - `Ssh Connection Profiles`
+
 ## `0.7.6` (2025-12-01)
 - Updates dependencies to maintain technical currency
 - Remediates CVE: [2025-64718](https://nvd.nist.gov/vuln/detail/CVE-2025-64718)
@@ -169,5 +184,3 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 ## `0.1.0`
 
 - Initial release to Broadcom Validate
-
-
