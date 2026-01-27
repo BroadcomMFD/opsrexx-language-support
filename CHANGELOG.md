@@ -2,6 +2,12 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.8.1` (2026-01-27)
+- Updates dependencies to maintain technical currency
+- Updates documentation to include usage instructions for single sign-on with Zowe API Mediation Layer
+- Changes command named `Create or Modify OPS/REXX LS SSH Connection Profiles` to `Manage OPS/REXX LS SSH Connection Profiles`
+- adds user extension setting `SSH Profiles Association`
+ 
 ## `0.8.0` (2025-12-22)
 - Updates dependencies to maintain technical currency
 - Introduces SSH connection feature
@@ -184,3 +190,4 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 ## `0.1.0`
 
 - Initial release to Broadcom Validate
+
