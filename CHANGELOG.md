@@ -2,6 +2,10 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.8.2` (2026-02-02)
+- Updates dependencies to maintain technical currency
+- Remediates CVE: [2026-24842](https://nvd.nist.gov/vuln/detail/CVE-2026-24842)
+
 ## `0.8.1` (2026-01-27)
 - Updates dependencies to maintain technical currency
 - Updates documentation to include usage instructions for single sign-on with Zowe API Mediation Layer
@@ -190,4 +194,5 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 ## `0.1.0`
 
 - Initial release to Broadcom Validate
+
 
