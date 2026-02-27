@@ -1,6 +1,6 @@
 Copyright 2026
 
-MSD-OPSMVS-VSCE : 0.8.3
+MSD-OPSMVS-VSCE : 0.8.4
 
 Components: 
 
@@ -16,9 +16,10 @@ balanced-match 1.0.2: https://github.com/juliangruber/balanced-match : MIT Licen
 balanced-match 4.0.4: https://github.com/juliangruber/balanced-match : MIT License
 bcrypt-pbkdf 1.0.2: https://github.com/joyent/node-bcrypt-pbkdf#readme : BSD 3-clause "New" or "Revised" License
 brace-expansion 2.0.2: https://github.com/juliangruber/brace-expansion : MIT License
-brace-expansion 5.0.3: https://github.com/juliangruber/brace-expansion : MIT License
+brace-expansion 5.0.4: https://github.com/juliangruber/brace-expansion : MIT License
 @broadcom/ops-for-zowe-cli 5.3.2 : Broadcom Internal
 buffer-from 1.1.2: https://github.com/linusu/buffer-from#readme : MIT License
+buildcheck 0.0.7: https://github.com/mscdex/buildcheck#readme : MIT License
 Chalk 4.1.2: https://github.com/sindresorhus/chalk : MIT License
 cli-table3 0.6.5: https://github.com/cli-table/cli-table3 : MIT License
 cliui 8.0.1: https://github.com/yargs/cliui : ISC License
@@ -30,6 +31,7 @@ color-string 2.1.4: https://github.com/Qix-/color-string : MIT License
 comment-json 4.2.5: https://github.com/kaelzhang/node-comment-json : MIT License
 concat-stream 2.0.0: https://github.com/maxogden/concat-stream : MIT License
 core-util-is 1.0.3: https://github.com/isaacs/core-util-is#readme : MIT License
+cpu-features 0.0.10: https://github.com/mscdex/cpu-features#readme : MIT License
 DABH/diagnostics 2.0.8: https://github.com/DABH/diagnostics : MIT License
 dataobject-parser 1.2.25: https://github.com/Gigzolo/dataobject-parser : MIT License
 date-format 4.0.14: https://github.com/nomiddlename/date-format : MIT License
@@ -59,7 +61,6 @@ hosted-git-info 7.0.2: https://github.com/npm/hosted-git-info : ISC License
 https-proxy-agent 7.0.6: https://github.com/TooTallNate/node-https-proxy-agent : MIT License
 inherits v2.0.4: https://github.com/isaacs/inherits : ISC License
 isexe 2.0.0: https://github.com/isaacs/isexe#readme : ISC License
-isexe 3.1.1: https://github.com/isaacs/isexe#readme : ISC License
 isexe 3.1.5: https://github.com/isaacs/isexe#readme : Blue Oak Model License 1.0.0
 is-extglob 2.1.1: https://github.com/jonschlinkert/is-extglob : MIT License
 is-fullwidth-code-point 3.0.0: https://github.com/sindresorhus/is-fullwidth-code-point : MIT License
@@ -86,14 +87,15 @@ merge2 1.4.1: https://github.com/teambition/merge2 : MIT License
 micromatch 4.0.8: https://github.com/jonschlinkert/micromatch : MIT License
 micromatch/braces 3.0.3: https://github.com/micromatch/braces : MIT License
 Microsofttslib 2.8.1: http://github.com/Microsoft/tslib/ : BSD Zero Clause License
-minimatch 10.2.2: https://github.com/isaacs/minimatch : Blue Oak Model License 1.0.0
+minimatch 10.2.3: https://github.com/isaacs/minimatch : Blue Oak Model License 1.0.0
+minimatch 10.2.4: https://github.com/isaacs/minimatch : Blue Oak Model License 1.0.0
 minimatch 5.1.9: https://github.com/isaacs/minimatch : ISC License
-minimatch 9.0.8: https://github.com/isaacs/minimatch : ISC License
 minimist 1.2.8: https://github.com/minimistjs/minimist : MIT License
 moxystudio/node-cross-spawn 7.0.6: https://github.com/moxystudio/node-cross-spawn : MIT License
 ms.js 2.1.3: https://github.com/guille/ms.js : MIT License
 mustache.js 4.2.0: http://mustache.github.com/ : MIT License
 mute-stream 1.0.0: https://github.com/isaacs/mute-stream : ISC License
+nan 2.25.0: https://github.com/rvagg/nan : MIT License
 nodeca-argparse 2.0.1: https://github.com/nodeca/argparse : Python Software Foundation License 2.0
 node-entities 4.5.0: https://github.com/FB55/node-entities : BSD 2-clause "Simplified" License
 node-fs-extra 11.3.2: https://github.com/jprichardson/node-fs-extra : MIT License
@@ -111,7 +113,7 @@ nodejs/string_decoder 1.3.0: https://github.com/nodejs/string_decoder : MIT Lice
 node-lru-cache 10.4.3: http://github.com/isaacs/node-lru-cache : ISC License
 node-progress 2.0.3: https://github.com/visionmedia/node-progress : MIT License
 node-semver  6.3.1: https://github.com/npm/node-semver : ISC License
-node-semver  7.7.3: https://github.com/npm/node-semver : ISC License
+node-semver  7.7.4: https://github.com/npm/node-semver : ISC License
 node-ssh 13.2.1: https://github.com/steelbrain/node-ssh : MIT License
 node-stack-trace 0.0.10: https://github.com/felixge/node-stack-trace : MIT License
 nopt 9.0.0: https://github.com/npm/nopt : ISC License
@@ -147,7 +149,6 @@ shebang-command 2.0.0: https://github.com/kevva/shebang-command#readme : MIT Lic
 shebang-regex 3.0.0: https://github.com/sindresorhus/shebang-regex : MIT License
 shell-escape 0.2.0: https://github.com/xxorax/node-shell-escape : MIT License
 @sinclair/typebox 0.27.10: https://github.com/sinclairzx81/typebox#readme : MIT License
-@sinclair/typebox 0.27.8: https://github.com/sinclairzx81/typebox#readme : MIT License
 sindresorhus/has-own-prop 2.0.0: https://github.com/sindresorhus/has-own-prop : MIT License
 sindresorhus/supports-color v7.2.0: https://github.com/sindresorhus/supports-color : MIT License
 @so-ric/colorspace 1.1.6: https://github.com/so-ric/colorspace : MIT License
@@ -188,17 +189,15 @@ yargs 17.7.2: https://github.com/yargs/yargs : MIT License
 yargs-parser 21.1.1: https://github.com/yargs/yargs-parser : ISC License
 yocto-queue 0.1.0: https://github.com/sindresorhus/yocto-queue#readme : MIT License
 zeekay/highlight.js 11.11.1: https://github.com/highlightjs/highlight.js : BSD 3-clause "New" or "Revised" License
-@zowe/core-for-zowe-sdk 8.29.11: https://github.com/zowe/zowe-cli/tree/master/packages/core#readme : Eclipse Public License 2.0
+@zowe/core-for-zowe-sdk 8.30.1: https://github.com/zowe/zowe-cli/tree/master/packages/core#readme : Eclipse Public License 2.0
 @zowe/imperative 8.30.1: https://github.com/zowe/imperative#readme : Eclipse Public License 2.0
 @zowe/secrets-for-zowe-sdk 8.29.4: https://github.com/zowe/zowe-cli/tree/master/packages/secrets#readme : Eclipse Public License 2.0
-@zowe/zos-console-for-zowe-sdk 8.29.11: https://github.com/zowe/zowe-cli/tree/master/packages/zosconsole#readme : Eclipse Public License 2.0
-@zowe/zos-files-for-zowe-sdk 8.29.11: https://github.com/zowe/zowe-cli/tree/master/packages/zosfiles#readme : Eclipse Public License 2.0
+@zowe/zos-console-for-zowe-sdk 8.30.1: https://github.com/zowe/zowe-cli/tree/master/packages/zosconsole#readme : Eclipse Public License 2.0
 @zowe/zos-files-for-zowe-sdk 8.30.1: https://github.com/zowe/zowe-cli/tree/master/packages/zosfiles#readme : Eclipse Public License 2.0
-@zowe/zos-jobs-for-zowe-sdk 8.29.11: https://github.com/zowe/zowe-cli/tree/master/packages/zosjobs#readme : Eclipse Public License 2.0
 @zowe/zos-jobs-for-zowe-sdk 8.30.1: https://github.com/zowe/zowe-cli/tree/master/packages/zosjobs#readme : Eclipse Public License 2.0
-@zowe/zosmf-for-zowe-sdk 8.29.11: https://github.com/zowe/zowe-cli/tree/master/packages/zosmf#readme : Eclipse Public License 2.0
-@zowe/zos-tso-for-zowe-sdk 8.29.11: https://github.com/zowe/zowe-cli/tree/master/packages/zostso#readme : Eclipse Public License 2.0
-@zowe/zos-uss-for-zowe-sdk 8.29.11: https://github.com/zowe/zowe-cli/tree/master/packages/zosuss#readme : Eclipse Public License 2.0
+@zowe/zosmf-for-zowe-sdk 8.30.1: https://github.com/zowe/zowe-cli/tree/master/packages/zosmf#readme : Eclipse Public License 2.0
+@zowe/zos-tso-for-zowe-sdk 8.30.1: https://github.com/zowe/zowe-cli/tree/master/packages/zostso#readme : Eclipse Public License 2.0
+@zowe/zos-uss-for-zowe-sdk 8.30.1: https://github.com/zowe/zowe-cli/tree/master/packages/zosuss#readme : Eclipse Public License 2.0
 @zowe/zowe-explorer-api 3.4.1: https://github.com/zowe/vscode-extension-for-zowe#readme : Eclipse Public License 2.0
 
 Licenses: 
@@ -541,7 +540,7 @@ THIS SOFTWARE.
 ---
 
 Blue Oak Model License 1.0.0
-(isexe 3.1.5, minimatch 10.2.2)
+(isexe 3.1.5, minimatch 10.2.3, minimatch 10.2.4)
 
 Blue Oak Model License
 ======================
@@ -638,7 +637,7 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 ---
 
 Eclipse Public License 2.0
-(@zowe/core-for-zowe-sdk 8.29.11, @zowe/imperative 8.30.1, @zowe/secrets-for-zowe-sdk 8.29.4, @zowe/zos-console-for-zowe-sdk 8.29.11, @zowe/zos-files-for-zowe-sdk 8.29.11, @zowe/zos-files-for-zowe-sdk 8.30.1, @zowe/zos-jobs-for-zowe-sdk 8.29.11, @zowe/zos-jobs-for-zowe-sdk 8.30.1, @zowe/zos-tso-for-zowe-sdk 8.29.11, @zowe/zos-uss-for-zowe-sdk 8.29.11, @zowe/zosmf-for-zowe-sdk 8.29.11, @zowe/zowe-explorer-api 3.4.1)
+(@zowe/core-for-zowe-sdk 8.30.1, @zowe/imperative 8.30.1, @zowe/secrets-for-zowe-sdk 8.29.4, @zowe/zos-console-for-zowe-sdk 8.30.1, @zowe/zos-files-for-zowe-sdk 8.30.1, @zowe/zos-jobs-for-zowe-sdk 8.30.1, @zowe/zos-tso-for-zowe-sdk 8.30.1, @zowe/zos-uss-for-zowe-sdk 8.30.1, @zowe/zosmf-for-zowe-sdk 8.30.1, @zowe/zowe-explorer-api 3.4.1)
 
 Eclipse Public License - v 2.0
 ==============================
@@ -932,7 +931,7 @@ IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE
 ---
 
 ISC License
-(abbrev 4.0.0, cliui 8.0.1, fastq 1.20.1, flatted 3.3.3, hosted-git-info 7.0.2, isexe 3.1.1, minimatch 5.1.9, minimatch 9.0.8, mute-stream 1.0.0, node-graceful-fs 4.2.11, node-lru-cache 10.4.3, node-semver  6.3.1, node-semver  7.7.3, nopt 9.0.0, npm-package-arg 11.0.3, proc-log 4.2.0, read 3.0.1, validate-npm-package-name 5.0.1, which 4.0.0, yargs-parser 21.1.1)
+(abbrev 4.0.0, cliui 8.0.1, fastq 1.20.1, flatted 3.3.3, hosted-git-info 7.0.2, minimatch 5.1.9, mute-stream 1.0.0, node-graceful-fs 4.2.11, node-lru-cache 10.4.3, node-semver  6.3.1, node-semver  7.7.4, nopt 9.0.0, npm-package-arg 11.0.3, proc-log 4.2.0, read 3.0.1, validate-npm-package-name 5.0.1, which 4.0.0, yargs-parser 21.1.1)
 
 ISC License (ISCL)
 ==================
@@ -2187,7 +2186,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ---
 
 MIT License
-(@colors/colors 1.6.0, @jest/schemas 29.6.3, @sinclair/typebox 0.27.10, @sinclair/typebox 0.27.8, @so-ric/colorspace 1.1.6, @types/semver 7.7.1, @types/triple-beam 1.3.5, @types/vscode 1.106.1, @types/yargs 17.0.35, @types/yargs-parser 21.0.3, agent-base 7.1.4, Async 3.2.6, async-mutex 0.5.0, balanced-match 4.0.4, brace-expansion 2.0.2, brace-expansion 5.0.3, cli-table3 0.6.5, color-name 2.0.2, color-string 2.1.4, comment-json 4.2.5, DABH/diagnostics 2.0.8, dataobject-parser 1.2.25, date-format 4.0.14, dayjs 1.11.13, debug-js/debug 4.4.3, deep-object-diff 1.1.9, deepmerge 4.3.1, diff2html 3.4.56, escalade 3.2.0, fast-glob 3.3.3, fastest-levenshtein 1.0.16, fecha 4.2.3, fill-range 7.1.1, flatiron/winston 3.19.0, https-proxy-agent 7.0.6, Jest from Facebook 29.6.3, jest-diff 29.7.0, jest-get-type 29.6.3, js-yaml 4.1.1, linkify-it 5.0.0, Lodash 4.17.23, logform 2.7.0, markdown-it 14.1.1, mdurl 2.0.0, micromatch 4.0.8, micromatch/braces 3.0.3, minimist 1.2.8, moxystudio/node-cross-spawn 7.0.6, node-fs-extra 11.3.2, node-fs-extra 11.3.3, node-http-proxy-agent 7.0.2, node-jsonfile 6.2.0, node-ssh 13.2.1, picomatch 4.0.3, pretty-format 29.7.0, Punycode.js 2.3.1, Qix-/color-convert 3.1.3, Qix/color 5.0.3, react-is 18.3.1, readable-stream 3.6.2, reusify 1.1.0, rfdc 1.4.1, safe-stable-stringify 2.5.0, sb-promise-queue 2.1.1, sb-scandir 3.1.1, shell-escape 0.2.0, ssh2 1.17.0, streamroller 3.1.5, tdegrunt/jsonschema 1.5.0, triple-beam 1.4.1, TypedArray 0.0.7, uc.micro 2.1.0, universalify 2.0.1, vscode-jsonrpc 8.2.0, vscode-languageclient 9.0.1, vscode-languageserver 9.0.1, vscode-languageserver-node 1.0.12, vscode-languageserver-node 3.17.5, vscode-languageserver-types 3.17.5, winston-transport 4.9.0, yargs 17.7.2)
+(@colors/colors 1.6.0, @jest/schemas 29.6.3, @sinclair/typebox 0.27.10, @so-ric/colorspace 1.1.6, @types/semver 7.7.1, @types/triple-beam 1.3.5, @types/vscode 1.106.1, @types/yargs 17.0.35, @types/yargs-parser 21.0.3, agent-base 7.1.4, Async 3.2.6, async-mutex 0.5.0, balanced-match 4.0.4, brace-expansion 2.0.2, brace-expansion 5.0.4, buildcheck 0.0.7, cli-table3 0.6.5, color-name 2.0.2, color-string 2.1.4, comment-json 4.2.5, cpu-features 0.0.10, DABH/diagnostics 2.0.8, dataobject-parser 1.2.25, date-format 4.0.14, dayjs 1.11.13, debug-js/debug 4.4.3, deep-object-diff 1.1.9, deepmerge 4.3.1, diff2html 3.4.56, escalade 3.2.0, fast-glob 3.3.3, fastest-levenshtein 1.0.16, fecha 4.2.3, fill-range 7.1.1, flatiron/winston 3.19.0, https-proxy-agent 7.0.6, Jest from Facebook 29.6.3, jest-diff 29.7.0, jest-get-type 29.6.3, js-yaml 4.1.1, linkify-it 5.0.0, Lodash 4.17.23, logform 2.7.0, markdown-it 14.1.1, mdurl 2.0.0, micromatch 4.0.8, micromatch/braces 3.0.3, minimist 1.2.8, moxystudio/node-cross-spawn 7.0.6, nan 2.25.0, node-fs-extra 11.3.2, node-fs-extra 11.3.3, node-http-proxy-agent 7.0.2, node-jsonfile 6.2.0, node-ssh 13.2.1, picomatch 4.0.3, pretty-format 29.7.0, Punycode.js 2.3.1, Qix-/color-convert 3.1.3, Qix/color 5.0.3, react-is 18.3.1, readable-stream 3.6.2, reusify 1.1.0, rfdc 1.4.1, safe-stable-stringify 2.5.0, sb-promise-queue 2.1.1, sb-scandir 3.1.1, shell-escape 0.2.0, ssh2 1.17.0, streamroller 3.1.5, tdegrunt/jsonschema 1.5.0, triple-beam 1.4.1, TypedArray 0.0.7, uc.micro 2.1.0, universalify 2.0.1, vscode-jsonrpc 8.2.0, vscode-languageclient 9.0.1, vscode-languageserver 9.0.1, vscode-languageserver-node 1.0.12, vscode-languageserver-node 3.17.5, vscode-languageserver-types 3.17.5, winston-transport 4.9.0, yargs 17.7.2)
 
 The MIT License
 ===============
