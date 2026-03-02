@@ -2,6 +2,10 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.8.5` (2026-03-02)
+- Updates dependencies to maintain technical currency
+- Remediates CVE: [2026-26996](https://nvd.nist.gov/vuln/detail/CVE-2026-26996)
+
 ## `0.8.4` (2026-02-27)
 - Updates dependencies to maintain technical currency
 - Remediates CVE: [2026-27903](https://nvd.nist.gov/vuln/detail/CVE-2026-27903)
@@ -204,6 +208,7 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 ## `0.1.0`
 
 - Initial release to Broadcom Validate
+
 
 
 
