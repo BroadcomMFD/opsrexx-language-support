@@ -2,6 +2,11 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.9.0` (2026-03-25)
+- Updates dependencies to maintain technical currency
+- Adds support to issue the `Execute Program` command via SSH connection
+- Removes the user extension setting `Program Output Channel: Auto-Open`
+
 ## `0.8.5` (2026-03-02)
 - Updates dependencies to maintain technical currency
 - Remediates CVE: [2026-26996](https://nvd.nist.gov/vuln/detail/CVE-2026-26996)
@@ -18,14 +23,14 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 
 ## `0.8.2` (2026-02-02)
 - Updates dependencies to maintain technical currency
-- Remediates CVE: [2026-24842](https://nvd.nist.gov/vuln/detail/CVE-2026-24842)
+- Remediates CVE: [2026-24842](https://nvd.nist.gov/vuln/detail/CVE-2026-24842)
 
 ## `0.8.1` (2026-01-27)
 - Updates dependencies to maintain technical currency
 - Updates documentation to include usage instructions for single sign-on with Zowe API Mediation Layer
 - Changes command named `Create or Modify OPS/REXX LS SSH Connection Profiles` to `Manage OPS/REXX LS SSH Connection Profiles`
-- adds user extension setting `SSH Profiles Association`
- 
+- Adds user extension setting `SSH Profiles Association`
+
 ## `0.8.0` (2025-12-22)
 - Updates dependencies to maintain technical currency
 - Introduces SSH connection feature
@@ -62,12 +67,10 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 - Adds support for OPS/REXX built-in function `OPSHRVAR`
 
 ## `0.7.1` (2025-05-23)
-
 - Fixes bug with `Search OPSLOG Records` where deselected columns in the table do not disappear
 - Fixes bug with `Search OPSLOG Records` where text searches in the `JOB NAME` column did not work
 
 ## `0.7.0` (2025-04-24)
-
 - Adds the ability to issue the following command via the OPS/MVS REST API with [@broadcom/ops-for-zowe-cli](https://www.npmjs.com/package/@broadcom/ops-for-zowe-cli):
     - `Search OPSLOG Records`
 - Improved error handling and messages for OPS/MVS REST API connection and configuration issues
@@ -75,21 +78,17 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 - Updates dependencies to maintain technical currency
 
 ## `0.6.3` (2025-01-28)
-
 - Bug fix for ARM rule auto-recognition
 - Updates dependencies to maintain technical currency
 
 ## `0.6.2` (2024-12-16)
-
 - Bug fix
 
 ## `0.6.1` (2024-12-11)
-
 - Updates README file association instructions
 - Adds first line check for `/* OPSREXX */` syntax
 
 ## `0.6.0` (2024-11-22)
-
 - Adds the ability to issue the following commands via the OPS/MVS REST API with [@broadcom/ops-for-zowe-cli](https://www.npmjs.com/package/@broadcom/ops-for-zowe-cli):
     - `Execute Program`
     - `Execute Program with Parameters` (keyboard shortcut `Ctrl+Shift+E`)
@@ -114,15 +113,12 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 - Updates README with new instructional GIFS 
 
 ## `0.5.4` (2024-10-10)
-
 - Enhances documentation for Address Host Environments
 
 ## `0.5.3` (2024-10-02)
-
 - Patch for Zowe Explorer V3 IntelliSense support
 
 ## `0.5.2` (2024-10-01)
-
 - Adds formatted compilation error messages for failed commands (View, Enable, or Disable)
 - Updates OPS/REXX built-in functions and host environment documentation for currency
 - Adds dynamic insertion of variable arguments to all OPS/REXX built-in functions and host environments
@@ -130,7 +126,6 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 - Adds Zowe V3 Conformance
 
 ## `0.5.1` (2024-08-09)
-
 - Adds 36 new syntax error checks (thanks @dd066068)
 - Adds snippets for all rule types
 - Adds Favicons (file icons) for OPSREXX file types
@@ -138,9 +133,7 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 - Fixes hover help bugs
 
 ## `0.5.0` (2024-07-19)
-
 - Adds new extension setting for using an OPS/MVS REST API connection
-
 - Adds the ability to issue the following commands via the OPS/MVS REST API with [@broadcom/ops-for-zowe-cli](https://www.npmjs.com/package/@broadcom/ops-for-zowe-cli):
     - `View Rule Status`
     - `Enable Rule`
@@ -149,30 +142,23 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
    The commands can be issued using local `.opsrexx` files or rules opened in Zowe Explorer.
    
 - Adds all remaining AOF stem variables for SEC rule types
-
 - Adds autocompletion of `DO END` and `IF THEN` statements
-
 - Enhances existing embedded documentation for OPS/MVS functions and host environments
-
 - Adds documentation for `View Rule Status`, `Enable Rule`, and `Disable Rule` commands
 
 ## `0.4.2` (2024-06-05)
-
 - Remediates CVE: [2024-4068](https://nvd.nist.gov/vuln/detail/CVE-2024-4068)
 
 ## `0.4.1` (2024-04-03)
-
 - Updates dependencies for currency
 
 ## `0.4.0` (2024-02-28)
-
 - Adds support for IntelliSense autocompletion and hover definition provider for all AOF Stem Variables
 - Updates readme for release
 - Addresses all known security and operational risks
 
 
 ## `0.3.0` (2023-10-18)
-
 - Adds support for IntelliSense autocompletion and hover definition provider for:
   - All prior supported OPS/REXX built-in functions and host environments
   - AOF stem variables:
@@ -184,7 +170,6 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 
 
 ## `0.2.0` (2023-09-13)
-
 - Adds support for OPS/REXX built-in functions:
   - DATE, FIND, INDEX, OPSACTN, OPSACTFN, OPSAPI, OPSARM, OPSARMST, OPSBITS, OPSBN, OPSCA7, OPSCAWTO, OPSCLEDQ, OPSCPF, OPSCPU, OPSDELV,OPSDEV, OPSDUMP, OPSECURE, OPSENQ, OPSGETVL, OPSHFI, OPSIPL, OPSJESX, OPSLIKE, OPSLOG, OPSLOGMG, OPSPDS, OPSPRM, OPSPRMLB, OPSSEND, OPSSETV, OPSSMF, OPSSMTBL, OPSSRM, OPSTATUS, OPSTHRSH, OPSTORE, OPSUBMIT, OPSUSS, OPSVALUE, OPSVASRV, OPSVSAM, OPSWAIT, OPSWLM, OPSWORD, OPSYSPLX, OPSYSSYM, TIME, and TRACE
 - Adds support for OPS/REXX Host Environments:
@@ -195,21 +180,13 @@ All notable changes to the "OPS/REXX Language Support" extension will be documen
 - Adds use of `@zowe/secrets-for-zowe-sdk` package to replace non-supported `keytar` package functions
 
 ## `0.1.2` (2023-07-21)
-
 - Adds ADDRESS OPER support
 - Adds ADDRESS AOF support
 - Enables configurable log level
 
 ## `0.1.1` (2023-07-12)
-
 - Corrects failure on hover on LF (instead of CRLF)
 - Disables comment pair checking which fails when adjacent to sequence numbers
 
 ## `0.1.0`
-
 - Initial release to Broadcom Validate
-
-
-
-
-
