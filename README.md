@@ -6,60 +6,58 @@
 
 The OPS/REXX language is a crucial part of the Broadcom OPS/MVS® product that adds to standard REXX a set of extensions to automate and enhance the productivity of z/OS operations. With the OPS/REXX Language Support extension (OPS/REXX LS), automation engineers can develop OPS/MVS Automated Operations Facility (AOF) rules and OPS/REXX programs more efficiently by editing OPS/REXX in a local VS Code environment.
 
-OPS/REXX LS includes the following features:
+OPS/REXX LS improves your OPS/REXX coding experience with the following features:
 
-- OPS/REXX syntax highlighting
-- Hover insights for OPS/REXX built-in functions, host environment names, and AOF event variable names
-- Autocompletion for OPS/REXX built-in functions, host environment names, and AOF event variables
-- Basic error checking for AOF rules and OPS/REXX syntax
-- A library of frequently used OPS/REXX rule snippets
-- If configured, specific OPS/MVS commands can be run to perform common rule actions, search OPSLOG records, and execute OPS/REXX programs
+- Used on its own or with Zowe Explorer, the extension offers editing features to help prevent coding errors and increase productivity, including:
+  - OPS/REXX syntax highlighting
+  - Hover insights and autocompletion for OPS/REXX built-in functions, host environment names, and AOF event variable names
+  - Basic error checking for AOF rules and OPS/REXX syntax
+  - A library of frequently used OPS/REXX rule snippets
+- By connecting OPS/REXX LS to an OPS/MVS instance, you can issue specific OPS/MVS commands that perform common rule actions, search OPSLOG records, and execute OPS/REXX programs.
 
-We encourage you to share ideas to help improve OPS/REXX Language Support. You can also report issues in the extension, using the following link.
+Combining these features enables you to create and test OPS/REXX rules and programs without having to leave the VS Code environment.
 
-> [Share an idea or open an issue in our Git repository](https://github.com/BroadcomMFD/opsrexx-language-support/issues)
 
 <img align="left" alt="This extension is part of the Code4z experience" width="80" height="82" src="https://raw.githubusercontent.com/BroadcomMFD/code4z/refs/heads/main/icon5.png" />
 
 OPS/REXX LS is part of the [Code4z](https://techdocs.broadcom.com/code4z) experience from Broadcom, which offers a modern experience for mainframe application developers. To get started with Code4z, check out our foundational [extension pack](https://marketplace.visualstudio.com/items?itemName=broadcomMFD.code4z-extension-pack).
 
-<br />
-<br />
+<br>
+<br>
+
+We encourage you to share ideas to help improve OPS/REXX Language Support. You can also report issues in the extension, using the following link.
+
+> [Share an idea or open an issue in our Git repository](https://github.com/BroadcomMFD/opsrexx-language-support/issues)
+
+<br>
 
 <details>
 <summary><span style="font-size: 1.5em"><b>Address Software Requirements</b></span><hr></summary>
 
-OPS/REXX LS has no prerequisite software. Use the following recommended software with OPS/REXX LS for the best experience:
-- REXX Language Support Extension
-- OPS/MVS REST API
-- Zowe Explorer
+OPS/REXX LS has no client or server-side requirements. Use the following recommended software with OPS/REXX LS for the best experience:
 
-<details><summary><span style="font-size: 1.3em">REXX Language Support Extension</span></summary>
+**REXX Language Support Extension**  
+For correct display of full REXX syntax highlighting, use OPS/REXX LS with a REXX language support extension. OPS/REXX LS has been tested for compatibility with the [REXX Language Support extension](https://marketplace.visualstudio.com/items?itemName=broadcomMFD.lsp-for-rexx).
 
-For correct display of full REXX syntax highlighting, use a REXX language support extension. OPS/REXX LS has been tested for compatibility with the [REXX Language Support extension](https://marketplace.visualstudio.com/items?itemName=broadcomMFD.lsp-for-rexx).
+**Zowe Explorer**  
+<img align="left" src="https://raw.githubusercontent.com/BroadcomMFD/code4z/refs/heads/main/zowe-conformant-zowev3-explorer-vs-code-color.png" alt="Zowe Explorer V3 Conformance Badge" width="150" height="123" href="https://www.openmainframeproject.org/all-projects/zowe/conformance"/>
+Integrate OPS/REXX LS with [Zowe Explorer](https://docs.zowe.org/stable/getting-started/user-roadmap-zowe-explorer) and set up a Zowe profile to enable the Single Sign-On feature of Zowe API ML, access mainframe data sets, and access features of OPS/REXX LS from a right-click menu. Zowe Explorer is available as part of the Code4z Foundation pack. <!--For more information about the Zowe Explorer extension, see 
+[Zowe Explorer](https://marketplace.visualstudio.com/items?itemName=Zowe.vscode-extension-for-zowe) on the VS Code marketplace.-->
 
-</details>
+<br>
+<br>
 
-<details>
-<summary><span style="font-size: 1.3em">OPS/MVS REST API</span></summary>
-
+**OPS/MVS REST API**    
 Establish a connection with your mainframe OPS/MVS instance using the OPS/MVS REST API as described in the [OPS/MVS documentation](https://techdocs.broadcom.com/us/en/ca-mainframe-software/automation/ca-ops-mvs-event-management-and-automation/14-0/using/use-the-rest-api.html). A connection to one or more OPS/MVS instances allows you to work with the AOF rules in your mainframe environment and to issue OPS/MVS commands from VS Code. Connecting to OPS/MVS through the REST API enables you to access all the OPS/MVS features available through the OPS/REXX LS extension. 
 
+
+
 </details>
 
 <details>
-<summary><span style="font-size: 1.3em">Zowe Explorer</span></summary>
+<summary><span style="font-size: 1.5em"><b>Address Security Requirements</b></span><hr></summary>
 
-<img src='docs/images/zowe-conformant-zowev3-explorer-vs-code-color.png' width='20%' height='20%' alt='This extension is conformant with Zowe Explorer v3'/>
-
-Use Zowe Explorer to access mainframe code while using OPS/REXX LS. For more information about the Zowe Explorer extension, see [Zowe Explorer](https://marketplace.visualstudio.com/items?itemName=Zowe.vscode-extension-for-zowe) on the VS Code marketplace.
-
-
-</details>
-
-<details><summary><span style="font-size: 1.3em">Security Requirements</span></summary>
-
-The connection from OPS/REXX LS to OPS/MVS must be secured using one or both of the following methods. 
+If you connect OPS/REXX LS to OPS/MVS, secure your connection using one or both of the following methods. 
 
  **OPS/MVS REST API**  
 This method requires a Zowe profile containing connection information for the REST API server.  This connection type is recommended for enterprise-level use of OPS/REXX LS. For more information, see "Configure OPS/REXX LS to Access OPS/MVS Using the OPS/MVS REST API."
@@ -83,18 +81,16 @@ For more information about these requirements, see "Configure OPS/REXX LS to Acc
 
 </details>
 
-</details>
-
 <details><summary><span style="font-size: 1.5em"><b>Getting Started</b></span><hr></summary>
 
 <details><summary><span style="font-size: 1.3em">Customize Extension Settings</span></summary>
   
-> **Note:**
-> Most extension settings are not discussed here. If an extension setting is not mentioned here, you can set it to reflect your site's preferences.
+> **Note**  
+> If an extension setting is not mentioned here, set it to reflect your site's preferences.
 
 **Select Connection Type**
 
-Customize OPS/REXX LS settings in VS Code for the type of secure connection to OPS/MVS that you will use. 
+Customize OPS/REXX LS settings in VS Code for the type of secure connection to OPS/MVS that you use. 
 
 1. From the **File** menu, select **Preferences > Settings** to display the **Settings** editor, then use the search bar to search for `OPS/REXX`.
 
@@ -132,21 +128,24 @@ To create a file association for a data set:
 
     **Example:** if you have a fully qualified data set named `OPSS.CCLXSAMP.SAMPLE.RULES`, you could put `**/*RULES*{,/*}` or `**/*CCLXSAMP*{,/*}` in the **Key** field to automatically associate all files in any data set with the matching qualifier.
 
-After completing these steps, you can use Zowe Explorer to access OPS/REXX files in data set members and use all the features of OPS/REXX LS.
+5.  To verify the file association: In the Zowe Explorer pane of the VS Code window, on the **Data Sets** tab, browse to the location of an existing rule or program and confirm that it has the `.opsrexx` extension and opens in the VS Code editor.  
 
-<!-- TPR comment: Needs verification step. Actual procedure is a good Walkthrough candidate. Actually describing steps to associate a data set and its members as opsrexx files -->
+You can now use Zowe Explorer to access OPS/REXX files in data set members.
+
+<!-- TPR comment: Actual procedure is a good Walkthrough candidate. Actually describing steps to associate a data set and its members as opsrexx files -->
  
 </details>
 
-<details><summary><span style="font-size: 1.3em">Configure OPS/REXX LS to Access OPS/MVS Using the REST API</span></summary>
+<details><summary><span style="font-size: 1.3em">Configure OPS/REXX LS to Access OPS/MVS with the REST API</span></summary>
 
 Connecting to OPS/MVS through the OPS/MVS REST API gives you access to all of the OPS/MVS features offered by OPS/REXX LS. 
  
 To set up a connection through the REST API:
 
-1. Ensure that OPS/MVS is configured with the OPS/MVS REST API (OPSREST) component.
+1. Ensure that your OPS/MVS instance is configured with the OPS/MVS REST API (OPSREST) component.
    
-   If you are using OPS/REXX LS with multiple OPS/MVS instances running on different systems, the OPS/MVS REST API must be installed and configured on each system in your OPSplex. One instance of the REST API is required for each system. When you have multiple instances of OPS/MVS running on a single system, only one instance of the REST API is required.
+  - If you are using OPS/REXX LS with multiple OPS/MVS instances running on different systems, the OPS/MVS REST API must be installed and configured on each system in your OPSplex. One instance of the REST API is required for each system.
+  - When you have multiple instances of OPS/MVS running on a single system, only one instance of the REST API is required.
 
 2. Create a team configuration file that contains the connection information for the OPS/MVS instance. Use _one_ of the following methods:
 
@@ -155,26 +154,28 @@ To set up a connection through the REST API:
      - The port number for the REST API.
      - A username that has authority to access the REST API.
      - The password to the account that is associated with the username.
+
     - [Manually create a team configuration file](https://techdocs.broadcom.com/us/en/ca-mainframe-software/automation/ca-ops-mvs-event-management-and-automation/14-0/installing/complete-configuration-tasks/configure-the-rest-api/integrate-with-zowe-cli.html#:~:text=Verify%20the%20Configuration.-,Update%20Team%20Configuration%20Manually,-Create%20a%20plug) as described in the OPS/MVS documentation. This method also requires a host name, port number, username, and password (see previous bullet for details).
   
-<!-- TPR comment: Needs a verification step -->
-
+3. To verify the connection: in the Zowe Explorer pane of the VS Code window, on the **Data Sets** tab, browse to the location of an existing rule and issue the `Show Rule Status`command as described in "Issue OPS/MVS Commands."  
+    If the rule status displays in the VS Code window, the connection is complete.
+   
 </details>
 
 <details>
 <summary><span style="font-size: 1.3em">Configure OPS/REXX LS for Single Sign-on (SSO) to the OPS/MVS REST API</span></summary>
 
-Integrating OPS/REXX LS with Zowe API Mediation Layer (API ML) allows you to authenticate your connection to the OPS/MVS REST API using SSO. To integrate OPS/REXX LS with Zowe API ML, follow the instructions in the section "Configure OPS/REXX LS to Access OPS/MVS Using the REST API," with the following adjustments:
+Integrating OPS/REXX LS with Zowe API Mediation Layer (API ML) allows you to authenticate your connection to the OPS/MVS REST API using SSO. To integrate OPS/REXX LS with Zowe API ML, follow the instructions in the section "Configure OPS/REXX LS to Access OPS/MVS Using the REST API," but with the following differences:
 
 1. Edit the team configuration file to use the following information in the `base` profile:
-     - The host name for Zowe API ML instance that you want to access.
-     - The port number for Zowe API ML instance that you want to access.
+     - The host name for the Zowe API ML instance that you want to access.
+     - The port number for the Zowe API ML instance that you want to access.
 
 2. To enable access to OPS/MVS commands from OPS/REXX LS using SSO, edit the `ops` profile in the Zowe team configuration file to include:  
-   -  the base path to the OPS/MVS REST API registered to the API ML instance specified in your `base` profile.
+   -  the base path to the OPS/MVS REST API that is registered to the API ML instance specified in your `base` profile.
    -  a `rest-api` parameter with a value of `true`
 
-An example of an edited `ops` profile is shown here:  
+The following example shows an `ops` profile that has been configured for Zowe API ML:  
   
 ``` json  
     "OPSREST": {
@@ -187,7 +188,7 @@ An example of an edited `ops` profile is shown here:
 ```
 3. To enable login to API ML using Zowe Explorer and access to z/OS data sets using SSO, edit the `zosmf` profile in the Zowe team configuration file to include only the base path to the z/OSMF API registered to the API ML instance specified in your `base` profile.
 
-An example of an edited `zosmf` profile is shown here:
+The following example shows a `zosmf` profile that has been configured for Zowe API ML:
 
 ``` json
       "zosmf": {
@@ -198,8 +199,8 @@ An example of an edited `zosmf` profile is shown here:
       },
 ```
 
-> **Note:**
-> The `zosmf` and `ops` profiles use the host and port for Zowe API ML from the `base` profile. Ensure that you do not provide username, password, host, or port directly on the `ops` or `zosmf` profiles. Supplying those options causes Zowe to ignore the API ML token in your base profile and access the service directly. For information on how profiles work together in a Zowe team configuration file, see [Using Base Profiles and Tokens with Existing Profiles](https://docs.zowe.org/stable/user-guide/ze-profiles/#using-base-profiles-and-tokens-with-existing-profiles).
+> **Note**    
+> The `zosmf` and `ops` profiles use the host and port for Zowe API ML from the `base` profile. Ensure that you do not provide a username, password, host, or port directly on the `ops` or `zosmf` profiles. Supplying those options causes Zowe to ignore the API ML token in your base profile and access the service directly. For information on how profiles work together in a Zowe team configuration file, see [Using Base Profiles and Tokens with Existing Profiles](https://docs.zowe.org/stable/user-guide/ze-profiles/#using-base-profiles-and-tokens-with-existing-profiles).
 
 4.  In the Zowe Explorer tree view pane, right click on **zosmf** to display a context menu.
 
@@ -229,7 +230,7 @@ An example of an edited `zosmf` profile is shown here:
         - The `zosmf` profile is updated to include an `authOrder` parameter with the value `token, bearer`.
 
     - Future commands using the OPS/MVS REST API server or z/OSMF will be made through Zowe API ML, using the `tokenValue` stored in the `base` profile until the token's expiration.
-    - Once the token is expired, use steps 4-6 to re-authenticate to API ML.
+    - Once the token is expired, follow steps 4-6 to re-authenticate to API ML.
     - A token can be invalidated at any time by following steps 4 and 5, then choosing **Log out from Authentication Service** from the Quick Pick menu.
 </details>
 
@@ -248,15 +249,15 @@ To establish a connection to OPS/MVS using SSH:
    `# OX which resides in the OPS/MVS loadlib.`    
    `export STEPLIB="SYS1.OPS.CCLXLOAD"`  
  
-  > **Note:**
+  > **Note**    
   > Ensure that `.ops_profile` contains no echo statements.
    
 2.  Create an OPSVSCE SSH connection profile.       
     
-    > **Note:**
+    > **Note**    
     > If you do not create an SSH profile during setup, and you attempt to issue a command using an SSH connection, you will be prompted to create a profile.
 
-    1. Use the VS Code Command Palette to issue the command **OPS/MVS: Manage OPS/REXX LS SSH Connection Profiles**.  
+    1. From Zowe Explorer or the VS Code Command Palette, select **OPS/MVS: Manage OPS/REXX LS SSH Connection Profiles**.  
        The command displays a list of settings to allow you to create a profile.
 
     2. Specify values for the following settings using the VS Code UI: 
@@ -286,7 +287,7 @@ To establish a connection to OPS/MVS using SSH:
 
 The SSH connection to OPS/MVS is established. 
 
-> **Note:**
+> **Note**    
 > We recommend that you use the **OPS/MVS: Manage OPS/REXX LS SSH Connection Profiles** command and the VS Code UI to create or edit OPSVSCE SSH profiles. 
 However, you may create a profile or edit it directly in `settings.json`.  To do this, in your OPS/REXX LS settings under **SSH Connection Profiles**, click the link **Edit in settings.json**.
 
@@ -299,7 +300,7 @@ However, you may create a profile or edit it directly in `settings.json`.  To do
   The name of the data set in which to store `OPSVSCE`.
 
    **defaultSubsystem** (Optional)  
-  The default OPS/MVS subsystem to be used for requests made with this profile. Defaults to OPSS.
+  The default OPS/MVS subsystem to be used for requests made with this profile. Defaults to `OPSS`.
 
    **installUssPath** (Optional)  
   The z/OS Unix path where the SSH manager will create a directory called `.opsrexx-vsce`. 
@@ -314,14 +315,15 @@ However, you may create a profile or edit it directly in `settings.json`.  To do
 OPS/REXX programs and rules are automatically recognized when opened in VS Code in the following cases:
 - When the file extension is `.opsrexx`
 - When the first line of the file contains either the comment `/* OPSREXX */` or a rule type identifier, such as `)CMD` or `)MSG` (case-insensitive)
-- When data set members that contain OPS/REXX programs and rules are opened using Zowe Explorer and the containing data set is associated with `opsrexx` files
+- When data set members that contain OPS/REXX programs and rules are opened using Zowe Explorer and the containing data set is associated with `.opsrexx` files
 
 When OPS/REXX programs and rules are recognized, syntax highlighting and basic error checking on AOF rules and OPS/REXX program syntax is enabled by default. Additional features of OPS/REXX LS are available depending on context and your configuration.
 
 <details>
 <summary><span style="font-size: 1.3em">OPS/REXX Hover Insights</span></summary>
 
-Place and hold your cursor over an OPS/REXX element to view more information about it. Hover insights are available for OPS/REXX built-in functions, host environments, or AOF event variable names.
+Hover insights are available for OPS/REXX built-in functions, host environments, and AOF event variable names. Place and hold your cursor over the name of one of these elements to view more information about it, as shown in the following video:
+
 
 ![Hover Insights](docs/images/gifs/hover.gif)
 
@@ -334,9 +336,9 @@ Autocompletion works for the following OPS/REXX language elements:
 - Built-in functions
 - Host environment names
 
-To trigger autocompletion of AOF variables, enter `.` after an AOF rule type stem, for example: `msg.` AOF variable completions are supported for all rule types.
+To trigger autocompletion of AOF variables, enter `.` after an AOF rule type stem, for example: `msg.` AOF variable completions are supported for all rule types. 
 
-Built-in function autocompletion is triggered automatically when you type an OPS/REXX built-in function or host environment name.
+Autocompletion is also triggered when you type the name of an OPS/REXX built-in function or host environment, as shown in the following video:
 
 ![Function and Host Env Completion](docs/images/gifs/basic-completion.gif)
 
@@ -344,11 +346,10 @@ Built-in function autocompletion is triggered automatically when you type an OPS
 
 </details>
 
-<details><summary><span style="font-size: 1.5em"><b>Review Scenarios</b></span><hr></summary>
   
-<details><summary><span style="font-size: 1.3em">Build AOF Rules with OPS/REXX Snippets</span></summary>
+<details><summary><span style="font-size: 1.5em"><b>Build AOF Rules with OPS/REXX Snippets</b></span><hr></summary>
 
-Before you write AOF rules from scratch, check the snippet library for any applicable rule snippets. Using snippets promotes consistent and correct syntax in the rules you design. 
+Before you write AOF rules from scratch, check the snippet library in OPS/REXX LS for any applicable rule snippets. Using snippets promotes consistent and correct syntax in the rules you design. 
 
 To use the snippet library:
 
@@ -358,18 +359,22 @@ To use the snippet library:
 4. Choose the type of rule snippet you want to insert.
 5. Fill in the templated values to complete the OPS/REXX rule.
 
-If you know the name of the snippet you want to use, you can begin typing the name of the snippet in the editor and select from the list of suggestions.
+The following video demonstrates how to use the snippet library.
 
 ![Snippets](docs/images/gifs/insert-snippet-cmd.gif)
 
+> **Tip**  
+> If you know the name of the snippet you want to use, you can begin typing the name of the snippet in the editor and select from the list of suggestions.
+
 </details>
 
-<details><summary><span style="font-size: 1.3em">Issue OPS/MVS Commands</span></summary>
+<details><summary><span style="font-size: 1.5em"><b>Issue OPS/MVS Commands</b></span><hr></summary>
 
-Issuing OPS/MVS commands from OPS/REXX LS requires connecting securely to an OPS/MVS subsystem using the OPS/MVS REST API or using SSH.   
+Issuing OPS/MVS commands from OPS/REXX LS requires that you connect the extension to an OPS/MVS subsystem using either the OPS/MVS REST API or SSH.   
 
-  - Certain commands require an OPS/MVS REST API connection.
-  - The only commands that require an SSH connection are those related to setting up the SSH connection.
+> **Note**    
+> - Certain commands require an OPS/MVS REST API connection.
+> - The only commands that require an SSH connection are commands that are related to setting up the SSH connection. These commands are discussed in the section "Configure OPS/REXX LS to Access OPS/MVS Using SSH".
 
 Use OPS/REXX LS to issue the following OPS/MVS commands by connecting through the OPS/MVS REST API or by connecting with SSH:
 
@@ -379,17 +384,17 @@ Use OPS/REXX LS to issue the following OPS/MVS commands by connecting through th
   - `Set Auto Enable` - Turns on the auto-enable feature for a selected rule.
   - `Reset Auto Enable` - Resets the auto-enable feature for a selected rule. 
   - `Rule Facility` - Allows you to check and modify the following rule statuses: active or inactive, auto-enabled or not auto-enabled.
-
-The following OPS/MVS commands are available when you use an OPS/MVS REST API connection:
-
   - `Execute Program` - Executes an OPS/REXX program that you choose by typing parameters into an input form.
+
+The following OPS/MVS command is only available when you use an OPS/MVS REST API connection:
+
   - `Search OPSLOG Records` - Provides a table of OPSLOG records that match your specified search parameters.
 
  To issue OPS/MVS commands using Zowe Explorer:
   1.  In the Zowe Explorer sidebar, locate the data set containing the rule or program you want to work with.
   2.  Right-click the data set member you want. An OPS/REXX LS menu appears.
-  3.  Select the command you want from the OPS/REXX LS menu.  
-After a command is issued, the VS Code window displays a status message. If a command fails, a detailed error message displays.
+  3.  Select the command you want.  
+After the command is issued, the VS Code window displays a status message. If a command fails, a detailed error message displays.
 
 The following video demonstrates how to issue an OPS/MVS command using Zowe Explorer:
 
@@ -398,63 +403,53 @@ The following video demonstrates how to issue an OPS/MVS command using Zowe Expl
 </details>
 
 <details>
-<summary><span style="font-size: 1.3em">Execute OPS/REXX Programs</span></summary>
+<summary><span style="font-size: 1.5em"><b>Execute OPS/REXX Programs</b></span><hr></summary>
 
-If you are using Zowe Explorer, issue the `Execute Program` command as described in "Issue OPS/MVS Commands." When you select **Execute Program** from the right-click menu, you are taken to the VS Code Command Palette, where you can enter any arguments that must be passed to the program.
+If you are using Zowe Explorer, issue the `Execute Program` command as described in "Issue OPS/MVS Commands." When you select **Execute Program** from the right-click menu, you are taken to a Quick Pick menu, where you can enter any arguments that must be passed to the program.
 
-You can also issue commands by using the VS Code Command Palette (`Ctrl+Shift+P`):
+You can also issue commands by entering `Ctrl+Shift+P` to go directly to the VS Code Command Palette:
 
-![OPS/MVS: Execute Program using Command Palette](docs/images/gifs/execute-program-w-cmdp.gif)
+![OPS/MVS: Execute Program using Command Palette](docs/images/gifs/execute-program.gif)
 
-> **Tip**  
-> You can use the keyboard shortcut `Ctrl+Shift+E` to specify the **OPS/MVS: Execute Program** command in the VS Code Command Palette. If the program you want to run is currently open, the command UI populates the name of the program.
+> **Tip**    
+> - You can use the keyboard shortcut `Ctrl+Shift+E` to specify **OPS/MVS: Execute Program** in a Quick Pick menu. If the program you want to run is currently open, the command UI populates the name of the program. 
+> - You can use the keyboard shortcut `Ctrl+C` in the output terminal while an OPS/REXX program is executing to send a stop signal to the program.
 
 </details>
 
 <details>
-<summary><span style="font-size: 1.3em">Search OPSLOG Records</span></summary>
+<summary><span style="font-size: 1.5em"><b>Search OPSLOG Records</b></span><hr></summary>
 
-Use the **OPS/MVS: Search OPSLOG Records** command to search the live OPS/MVS OPSLOG.
+Select **OPS/MVS: Search OPSLOG Records** from Zowe Explorer or the VS Code Command Palette to search the live OPS/MVS OPSLOG.
 
-If you select **Submit Search** without specifying parameters, you can browse the most recent records or the oldest records from the OPSLOG:
+- Select **Submit Search** without specifying parameters to browse the most recent records or the oldest records from the live OPSLOG:
 
 ![OPS/MVS: Search OPSLOG Records without search term](docs/images/gifs/opslog-search-empty.gif)
 
-Specify parameters to search for specific text in the OPSLOG:
+- Specify parameters to search for specific text in the live OPSLOG:
 
 ![OPS/MVS: Search OPSLOG Records with search term](docs/images/gifs/opslog-search-term.gif)
 
-> **Tip**  
+> **Tip**    
 > To select a different OPSLOG to search, select **OPS/MVS: Search OPSLOG Records > Search Settings > Log Name**.
 
 </details>
 
-<details><summary><span style="font-size: 1.3em">Use OPS/MVS Automation Samples</span></summary>
-OPS/MVS distributes sample AOF rules, OPS/REXX programs, and user exits that demonstrate various aspects of automating operations in a mainframe environment. You can use Zowe Explorer to copy these samples to your own library, and use OPS/REXX LS to develop, manage, and run your versions of these samples.
+<details><summary><span style="font-size: 1.5em"><b>Use OPS/MVS Automation Samples</b></span><hr></summary>
+
+OPS/MVS distributes sample AOF rules, OPS/REXX programs, and user exits that demonstrate various aspects of automating operations in a mainframe environment. You can use Zowe Explorer to copy these samples to your own library, then use OPS/REXX LS to develop, manage, and run your versions of these samples.
+
+The following video demonstrates using OPS/REXX LS to work with a sample program.
 
 ![Copy an OPS/MVS sample program and execute it with parameters](docs/images/gifs/copy-sample-and-run-w-parameters.gif)
 
-For a complete listing of the automation samples that are included with OPS/MVS, see [Sample Automation](https://techdocs.broadcom.com/us/en/ca-mainframe-software/automation/ca-ops-mvs-event-management-and-automation/14-0/reference-information/sample-automation.html) in the OPS/MVS documentation.
-
-</details>
-
-</details>
-
-
-
-</details>
-
-<details>
-<summary><span style="font-size: 1.5em"><b>Zowe Conformance Program</b></span><hr></summary>
-
-<img align="left" src="https://raw.githubusercontent.com/BroadcomMFD/code4z/refs/heads/main/zowe-conformant-zowev3-explorer-vs-code-color.png" alt="Zowe Explorer V3 Conformance Badge" width="100" height="82" href="https://www.openmainframeproject.org/all-projects/zowe/conformance">
-
-OPS/REXX LS is Zowe Explorer V3 Conformant. The Zowe Conformance Program ensures a high level of common functionality, interoperability, and user experience while using an extension that leverages Zowe. For more information, see [Zowe Conformance Program](https://www.openmainframeproject.org/all-projects/zowe/conformance).
+For a listing of the automation samples that are included with OPS/MVS, see [Sample Automation](https://techdocs.broadcom.com/us/en/ca-mainframe-software/automation/ca-ops-mvs-event-management-and-automation/14-0/reference-information/sample-automation.html) in the OPS/MVS documentation.
 
 </details>
 
 <details>
 <summary id="technical-assistance-and-support"><span style="font-size: 1.5em"><b>Technical Assistance and Support</b></span><hr></summary>
+  
 OPS/REXX Language Support is made available to customers on the Visual Studio Code Marketplace in accordance with the terms and conditions contained in the provided End-User License Agreement (EULA).
 
 If you are on active support for OPS/MVS, you get technical assistance and support in accordance with the terms, guidelines, details, and parameters that are located within the Broadcom [Working with Support](https://support.broadcom.com/external/content/release-announcements/CA-Support-Policies/6933) guide.
@@ -468,7 +463,7 @@ This support generally includes:
 - Interactive remote diagnostic support
 - Technical support cases must be submitted to Broadcom in accordance with guidance provided in “Working with Support”.
 
-> **Note**  
+> **Note**      
 > To receive technical assistance and support, you must remain compliant with “Working with Support”, be current on all applicable licensing and maintenance requirements, and maintain an environment in which all computer hardware, operating systems, and third party software associated with the affected Broadcom software are on the releases and version levels from the manufacturer that Broadcom designates as compatible with the software. Changes you elect to make to your operating environment could detrimentally affect the performance of Broadcom software and Broadcom shall not be responsible for these effects or any resulting degradation in performance of the Broadcom software. Severity 1 cases must be opened via telephone and elevations of lower severity incidents to Severity 1 status must be requested via telephone.
 
 </details>
