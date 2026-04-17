@@ -2,6 +2,10 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.9.2` (2026-04-17)
+- Updates dependencies to maintain technical currency
+- Updates minimum VS Code supported version to 1.105.1
+
 ## `0.9.1` (2026-03-27)
 - Updates dependencies to maintain technical currency
 - Remediates CVE: [2026-33671](https://nvd.nist.gov/vuln/detail/CVE-2026-33671)
