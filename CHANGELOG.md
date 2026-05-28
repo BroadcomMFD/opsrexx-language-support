@@ -2,6 +2,17 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.10.0` (2026-05-28)
+- Updates dependencies to maintain technical currency
+- Adds support to issue the `Search OPSLOG Records` command via SSH connection
+- Adds support for autocompletion, hover help, and Go to definition for user-defined subroutines and variables
+- Adds support for autocompletion of REXX keywords
+- Adds REXX syntax tokenization, eliminating need for additional REXX language support
+- Bug fix for embedded comment syntax tokenization
+- Bug fix for erroneous rule diagnostics in OPS/REXX execs
+- Bug fix for hover help of sandwiched variables and functions
+- Bug fix for SSH execute program requests failing when they contain `$` characters in the program name
+
 ## `0.9.2` (2026-04-17)
 - Updates dependencies to maintain technical currency
 - Updates minimum VS Code supported version to 1.105.1
