@@ -2,6 +2,10 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.10.1` (2026-06-02)
+- Updates README
+- Style updates in OPSVSCE server program
+
 ## `0.10.0` (2026-05-28)
 - Updates dependencies to maintain technical currency
 - Adds support to issue the `Search OPSLOG Records` command via SSH connection
