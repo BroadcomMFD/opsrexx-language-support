@@ -60,7 +60,7 @@ If you connect OPS/REXX LS to OPS/MVS, secure your connection using one or both 
 This method requires a Zowe profile containing connection information for the REST API server.  This connection type is recommended for enterprise-level use of OPS/REXX LS. For more information, see "Configure OPS/REXX LS to Access OPS/MVS Using the OPS/MVS REST API."
 
  **SSH**  
-Connecting to OPS/MVS using the SSH Protocol is recommended for situations where quick setup is important, such as individual experimentation. It gives you access to a subset of the OPS/MVS features available through OPS/REXX LS. The SSH connection method has the following prerequisites:
+Connecting to OPS/MVS using the SSH Protocol is recommended for situations where quick setup is important, such as individual experimentation. The SSH connection method has the following prerequisites:
 
   - A Zowe SSH profile containing the host name, username and password for an SSH connection.  
    
