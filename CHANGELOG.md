@@ -2,11 +2,15 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.10.2` (2026-06-02)
+- Updates dependencies to maintain technical currency
+
 ## `0.10.1` (2026-06-02)
 - Updates README
 - Style updates in OPSVSCE server program
 
 ## `0.10.0` (2026-05-28)
+- Through ongoing internal product security reviews, Broadcom Mainframe Software discovered a HIGH severity vulnerability in all versions prior to v0.10.0 
 - Updates dependencies to maintain technical currency
 - Adds support to issue the `Search OPSLOG Records` command via SSH connection
 - Adds support for autocompletion, hover help, and Go to definition for user-defined subroutines and variables
