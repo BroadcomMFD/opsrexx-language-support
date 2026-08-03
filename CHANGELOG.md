@@ -2,6 +2,15 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.10.3` (2026-08-03)
+- Updates dependencies to maintain technical currency
+- Adds hyperlinks to applicable Broadcom TechDocs web pages for all hover doc
+- Adds support for syntax error checking of OPS/MVS dynamic rules built using REXX stem variables or REXX keywords (`QUEUE` or `PUSH`)
+- Adds syntax highlighting for dynamic AOF rule control lines in quoted strings
+- Adds support for CSRF protection on OPS/MVS REST API requests
+- Adds ability to run commands via file tab and editor right-click context menus
+- Bug fix for display formatting of REST API error messages in program output pseudo terminal
+
 ## `0.10.2` (2026-06-02)
 - Updates dependencies to maintain technical currency
 
