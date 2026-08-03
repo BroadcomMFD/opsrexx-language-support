@@ -38,8 +38,7 @@ OPS/REXX LS has no client or server-side requirements. Use the following recomme
 
 **Zowe Explorer**  
 <img align="left" src="https://raw.githubusercontent.com/BroadcomMFD/code4z/refs/heads/main/zowe-conformant-zowev3-explorer-vs-code-color.png" alt="Zowe Explorer V3 Conformance Badge" width="150" height="123" href="https://www.openmainframeproject.org/all-projects/zowe/conformance"/>
-Integrate OPS/REXX LS with [Zowe Explorer](https://docs.zowe.org/stable/getting-started/user-roadmap-zowe-explorer) and set up a Zowe profile to enable the Single Sign-On feature of Zowe API ML, access mainframe data sets, and access features of OPS/REXX LS from a right-click menu. Zowe Explorer is available as part of the Code4z Foundation pack. <!--For more information about the Zowe Explorer extension, see 
-[Zowe Explorer](https://marketplace.visualstudio.com/items?itemName=Zowe.vscode-extension-for-zowe) on the VS Code marketplace.-->
+Integrate OPS/REXX LS with [Zowe Explorer](https://docs.zowe.org/stable/getting-started/user-roadmap-zowe-explorer) and set up a Zowe profile to enable the Single Sign-On feature of Zowe API ML, access mainframe data sets, and access features of OPS/REXX LS from a right-click menu. Zowe Explorer is available as part of the Code4z Foundation pack.
 
 <br>
 <br>
@@ -52,7 +51,7 @@ Establish a connection with your mainframe OPS/MVS instance using the OPS/MVS RE
 </details>
 
 <details>
-<summary><span style="font-size: 1.5em"><b>Address Security Requirements</b></span><hr></summary>
+<summary><span style="font-size: 1.5em"><b>Address Connection Prerequisites</b></span><hr></summary>
 
 If you connect OPS/REXX LS to OPS/MVS, secure your connection using one or both of the following methods. 
 
@@ -93,7 +92,7 @@ Customize OPS/REXX LS settings in VS Code for the type of secure connection to O
 
 2. Select the **User** or **Workspace** tab, depending on the level of settings you want to update.
 
-3. For the **Connection Mode** setting, select one of the following options to determine which secure connection type OPS/REXX LS uses when it issues commands to OPS/MVS.
+3. For the **Connection Mode** setting, select one of the following options to determine which secure connection type OPS/REXX LS uses when it issues commands to OPS/MVS:
 
    - **ADAPTIVE** (default): OPS/REXX LS automatically uses the type of connection that is supported by each command. If the command supports both types of connection, the extension uses the **Preferred Connection Order** setting to determine which secure connection type to use.
      
@@ -101,7 +100,7 @@ Customize OPS/REXX LS settings in VS Code for the type of secure connection to O
   
    - **ONLY_SSH**: OPS/REXX LS uses only SSH to interact with OPS/MVS. Commands requiring a REST API connection will fail.
 
-4. If you selected **ADAPTIVE** as the **Connection Mode**, specify the **Preferred Connection Order**.
+4. If you selected **ADAPTIVE** as the **Connection Mode**, select one of the following options as the **Preferred Connection Order**:
 
     - **REST-API then SSH**  
       The extension tries to connect to OPS/MVS using a REST API connection first, then uses SSH if a REST API connection is not available.
@@ -115,7 +114,7 @@ To ensure that all OPS/REXX programs and rules are recognized by OPS/REXX LS as 
 
 To create a file association for a data set:
 
-1. From the **File** menu, select **Preferences > Settings** to display the Settings editor.
+1. From the **File** menu, select **Preferences > Settings** to display the **Settings** editor.
 
 2. Select the **User** or **Workspace** tab, depending on which settings you want to update.
 
@@ -129,8 +128,6 @@ To create a file association for a data set:
 
 You can now use Zowe Explorer to access OPS/REXX files in data set members.
 
-<!-- TPR comment: Actual procedure is a good Walkthrough candidate. Actually describing steps to associate a data set and its members as opsrexx files -->
- 
 </details>
 
 <details><summary><span style="font-size: 1.3em">Configure OPS/REXX LS to Access OPS/MVS with the REST API</span></summary>
@@ -152,7 +149,7 @@ To set up a connection through the REST API:
 
     - [Manually create a team configuration file](https://techdocs.broadcom.com/us/en/ca-mainframe-software/automation/ca-ops-mvs-event-management-and-automation/14-0/installing/complete-configuration-tasks/configure-the-rest-api/integrate-with-zowe-cli.html#:~:text=Verify%20the%20Configuration.-,Update%20Team%20Configuration%20Manually,-Create%20a%20plug) as described in the OPS/MVS documentation. This method also requires a host name, port number, username, and password (see previous bullet for details).
   
-3. To verify the connection: in the Zowe Explorer pane of the VS Code window, on the **Data Sets** tab, browse to the location of an existing rule and issue the `Show Rule Status`command as described in "Issue OPS/MVS Commands."  
+3. To verify the connection: in the Zowe Explorer pane of the VS Code window, on the **Data Sets** tab, browse to the location of an existing rule and issue the `View Rule Status`command as described in "Issue OPS/MVS Commands."  
     If the rule status displays in the VS Code window, the connection is complete.
    
 </details>
@@ -312,12 +309,12 @@ OPS/REXX programs and rules are automatically recognized when opened in VS Code 
 - When the first line of the file contains either the comment `/* OPSREXX */` or a rule type identifier, such as `)CMD` or `)MSG` (case-insensitive)
 - When data set members that contain OPS/REXX programs and rules are opened using Zowe Explorer and the containing data set is associated with `.opsrexx` files
 
-When OPS/REXX programs and rules are recognized, syntax highlighting and basic error checking on AOF rules and OPS/REXX program syntax is enabled by default. Additional features of OPS/REXX LS are available depending on context and your configuration.
+When OPS/REXX programs and rules are recognized, syntax highlighting and basic error checking on AOF rules and OPS/REXX program syntax is enabled by default, including syntax checking for dynamic AOF rules that are built at runtime using REXX stem variables or REXX keywords such as `QUEUE` or `PUSH`. Additional features of OPS/REXX LS are available depending on context and your configuration.
 
 <details>
 <summary><span style="font-size: 1.3em">OPS/REXX Hover Insights</span></summary>
 
-Hover insights are available for OPS/REXX built-in functions, host environments, AOF event variable names, and user-declared variables and subroutines. Place and hold your cursor over the name of one of these elements to view more information about it, as shown in the following video:
+Hover insights are available for OPS/REXX built-in functions, host environments, AOF event variable names, and user-declared variables and subroutines. Place and hold your cursor over the name of one of these elements to view more information about it, as shown in the following video. Where applicable, hover insights include a link to the relevant Broadcom TechDocs page for further reference.
 
 
 ![Hover Insights](docs/images/gifs/hover.gif)
@@ -330,14 +327,22 @@ Autocompletion works for the following OPS/REXX language elements:
 - AOF variables
 - Built-in functions
 - Host environment names
+- REXX keywords
 - User-declared variables
 - User-declared subroutines
 
 To trigger autocompletion of AOF variables, enter `.` after an AOF rule type stem, for example: `msg.` AOF variable completions are supported for all rule types. 
 
-Autocompletion is also triggered when you type the name of an OPS/REXX built-in function, host environment, user-declared variable, or subroutine as shown in the following video:
+Autocompletion is also triggered when you type the name of an OPS/REXX built-in function, host environment, REXX keyword, user-declared variable, or subroutine as shown in the following video:
 
 ![Function and Host Env Completion](docs/images/gifs/basic-completion.gif)
+
+</details>
+
+<details>
+<summary><span style="font-size: 1.3em">Go to Definition</span></summary>
+
+Go to Definition is available for user-declared variables and subroutines, allowing you to navigate directly to where they are declared in the current file.
 
 </details>
 
@@ -371,12 +376,12 @@ Issuing OPS/MVS commands from OPS/REXX LS requires that you connect the extensio
 
 Use OPS/REXX LS to issue the following OPS/MVS commands by connecting through the OPS/MVS REST API or by connecting with SSH:
 
-  - `Show Rule Status` - Shows the status of a selected rule.   
+  - `View Rule Status` - Shows the status of a selected rule.   
   - `Enable Rule` - Enables a selected rule.
   - `Disable Rule` - Disables a selected rule.
   - `Set Auto Enable` - Turns on the auto-enable feature for a selected rule.
   - `Reset Auto Enable` - Resets the auto-enable feature for a selected rule. 
-  - `Rule Facility` - Allows you to check and modify the following rule statuses: active or inactive, auto-enabled or not auto-enabled.
+  - `Rule Facility` - Checks and modifies the following rule statuses: active or inactive, auto-enabled or not auto-enabled.
   - `Execute Program` - Executes an OPS/REXX program that you choose by typing parameters into an input form.
   - `Search OPSLOG Records` - Provides a table of OPSLOG records that match your specified search parameters.
 
@@ -386,9 +391,19 @@ Use OPS/REXX LS to issue the following OPS/MVS commands by connecting through th
   3.  Select the command you want.  
 After the command is issued, the VS Code window displays a status message. If a command fails, a detailed error message displays.
 
-The following video demonstrates how to issue an OPS/MVS command using Zowe Explorer:
+The following video demonstrates how to issue an OPS/MVS command from the Zowe Explorer sidebar:
 
 ![OPS/MVS: Enable Rule with Right Click](docs/images/gifs/enable-rule-rc.gif)
+
+If the rule or program is already open in the VS Code editor, and was opened from a Zowe Explorer data set, you can issue commands without returning to the sidebar. 
+To issue commands without using the sidebar:
+  1. From the open rule or program, do *one* of the following:  
+    - Right-click the **Editor** tab.  
+    - Right-click anywhere in the body of the rule or program.  
+     An OPS/MVS menu appears. 
+  2. Select the command you want from the menu.
+
+While an OPS/REXX rule is open in the VS Code editor, you can also issue the `View Rule Status`, `Enable Rule`, `Disable Rule`, `Set Auto Enable`, and `Reset Auto Enable` commands directly from the VS Code Command Palette (`Ctrl/Cmd+Shift+P`). 
 
 </details>
 
