@@ -2,6 +2,11 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.10.4` (2026-08-25)
+- Updates dependencies to maintain technical currency
+- Bug fix for SSH backend auto-deploy silently failing to update after a version mismatch
+- Bug fix for SSH host-key trust prompts failing to recover after a legitimate host-key rotation
+
 ## `0.10.3` (2026-08-03)
 - Updates dependencies to maintain technical currency
 - Adds hyperlinks to applicable Broadcom TechDocs web pages for all hover doc
