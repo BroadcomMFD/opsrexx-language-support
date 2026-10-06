@@ -2,6 +2,10 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.10.5` (2026-10-06)
+- Updates dependencies to maintain technical currency
+- Remediates CVE: [2026-84375](https://nvd.nist.gov/vuln/detail/CVE-2026-84375)
+
 ## `0.10.4` (2026-08-25)
 - Updates dependencies to maintain technical currency
 - Bug fix for SSH backend auto-deploy silently failing to update after a version mismatch
