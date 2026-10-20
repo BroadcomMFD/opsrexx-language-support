@@ -2,6 +2,11 @@
 
 All notable changes to the "OPS/REXX Language Support" extension will be documented in this file.
 
+## `0.10.6` (2026-10-20)
+- Updates dependencies to maintain technical currency
+- Remediates CVE: [2026-93749](https://nvd.nist.gov/vuln/detail/CVE-2026-93749)
+- Makes the SSH connection profile setting `deployDataset` optional, defaulting to the sequential data set `<USERID>.OPSVSCE.REXX`.
+
 ## `0.10.5` (2026-10-06)
 - Updates dependencies to maintain technical currency
 - Remediates CVE: [2026-84375](https://nvd.nist.gov/vuln/detail/CVE-2026-84375)
