@@ -63,8 +63,6 @@ Connecting to OPS/MVS using the SSH Protocol is recommended for situations where
 
   - A Zowe SSH profile containing the host name, username and password for an SSH connection.  
    
-  - A destination data set in which to store the REXX program `OPSVSCE`, which enables the OPS/REXX LS connection to SSH. For more information, see "Configure OPS/REXX LS to Access OPS/MVS Using SSH." 
-    
   - The OX load module, which is provided by OPS/MVS in the load library `CCLXLOAD`, must be in one of the following locations:  
     
     - In a PDS or PDSE included in `LNKLST` or `LPALIB`
@@ -157,7 +155,7 @@ To set up a connection through the REST API:
 <details>
 <summary><span style="font-size: 1.3em">Configure OPS/REXX LS for Single Sign-on (SSO) to the OPS/MVS REST API</span></summary>
 
-Integrating OPS/REXX LS with Zowe API Mediation Layer (API ML) allows you to authenticate your connection to the OPS/MVS REST API using SSO. To integrate OPS/REXX LS with Zowe API ML, follow the instructions in the section "Configure OPS/REXX LS to Access OPS/MVS Using the REST API," but with the following differences:
+Integrating OPS/REXX LS with Zowe API Mediation Layer (API ML) allows you to authenticate your connection to the OPS/MVS REST API using SSO. To integrate OPS/REXX LS with Zowe API ML, follow the instructions in the section "Configure OPS/REXX LS to Access OPS/MVS with the REST API," but with the following differences:
 
 1. Edit the team configuration file to use the following information in the `base` profile:
      - The host name for the Zowe API ML instance that you want to access.
@@ -174,7 +172,7 @@ The following example shows an `ops` profile that has been configured for Zowe A
             "type": "ops",
             "properties": {
                 "basePath": "opsrest/api/v1",
-                "rest-api": true,
+                "rest-api": true
             }
         },
 ```
@@ -214,7 +212,7 @@ The following example shows a `zosmf` profile that has been configured for Zowe 
                 "tokenType": "apimlAuthenticationToken"
             },
             "secure": [
-                "tokenValue",
+                "tokenValue"
             ]
         },
         ```
@@ -234,20 +232,22 @@ To establish a connection to OPS/MVS using SSH:
 
 1. Specify the location of the OX load module.
     
-    _If_ the OPS/MVS OX load module (see "Address Security Requirements") is not deployed to a LNKLST or LPALIB library, update the `.ops_profile` for each user of OPS/REXX LS to specify the library that contains the load module as a STEPLIB export, as shown in the following example:
+    _If_ the OPS/MVS OX load module (see "Address Connection Prerequisites") is not deployed to a LNKLST or LPALIB library, update the `.ops_profile` for each user of OPS/REXX LS to specify the library that contains the load module as a STEPLIB export, as shown in the following example:
     
-   `#!/_bin_/_sh_  _load module_`     
-   `# this shell script allows the shell to invoke`    
-   `# OX which resides in the OPS/MVS loadlib.`    
-   `export STEPLIB="SYS1.OPS.CCLXLOAD"`  
+    ```sh
+    #!/bin/sh
+    # this shell script allows the shell to invoke
+    # OX which resides in the OPS/MVS loadlib.
+    export STEPLIB="SYS1.OPS.CCLXLOAD"
+    ```
  
   > **Note**    
   > Ensure that `.ops_profile` contains no echo statements.
    
-2.  Create an OPSVSCE SSH connection profile.       
+2.  (Optional) Create an OPSVSCE SSH connection profile.       
     
     > **Note**    
-    > If you do not create an SSH profile during setup, and you attempt to issue a command using an SSH connection, you will be prompted to create a profile.
+    > This step is only needed to override defaults. If you do not create an SSH profile during setup, and you attempt to issue a command using an SSH connection, a profile with default settings is created automatically for the Zowe SSH profile you use. By default, `OPSVSCE` is deployed to the sequential data set `<USERID>.OPSVSCE.REXX`, where `<USERID>` is the user name of the Zowe SSH profile (or the result of `id -un` if the profile has no user name).
 
     1. From Zowe Explorer or the VS Code Command Palette, select **OPS/MVS: Manage OPS/REXX LS SSH Connection Profiles**.  
        The command displays a list of settings to allow you to create a profile.
@@ -257,8 +257,8 @@ To establish a connection to OPS/MVS using SSH:
        **Profile Name** (Required)  
        Enter a name for the OPSVSCE SSH profile. The name must match an existing Zowe SSH profile, which allows your OPSVSCE SSH profile to use the host name, username and password included in the Zowe profile to make the connection to OPS/MVS. If the name you enter does not match a Zowe SSH profile, you will be prompted to change it.  
 
-       **Backend Data Set** (Required)   
-       Enter a name for a data set in which to store the REXX program `OPSVSCE`, which enables OPS/REXX LS to carry out OPS/MVS commands over SSH.  
+       **Backend Data Set** (Optional)   
+       Enter the name of an existing PDS in which to store the REXX program `OPSVSCE` as a member. `OPSVSCE` enables OPS/REXX LS to carry out OPS/MVS commands over SSH. If you leave this blank, `OPSVSCE` is stored in the sequential data set `<USERID>.OPSVSCE.REXX`, which is created on the first deploy. Specify a value only if you cannot create data sets under your own high-level qualifier or need a different location.
 
        **Default Subsystem** (Optional)      
        Specify the default OPS/MVS subsystem to be used for requests made with this profile. Defaults to OPSS.
@@ -266,7 +266,7 @@ To establish a connection to OPS/MVS using SSH:
        **Install z/OS Unix path** (Optional)    
        Specify the z/OS Unix path where the SSH manager creates the directory `.opsrexx-vsce`.     
 
-       If a path is not specified, your home directory is used. This directory is used to run the commands that are needed to prepare `OPSVSCE` and deploy it to the specified  **Backend Data Set**. The directory is only used to transfer files to the backend data set, after which it is automatically emptied. 
+       If a path is not specified, your home directory is used. This directory is used to run the commands that are needed to prepare `OPSVSCE` and deploy it to the **Backend Data Set**. The directory is only used to transfer files to the backend data set, after which it is automatically emptied. 
 
     3.  Select **Add this OPS/REXX LS SSH Profile to your settings**.  
         The OPSVSCE SSH profile is saved to your OPS/REXX LS settings. 
@@ -275,9 +275,13 @@ To establish a connection to OPS/MVS using SSH:
    A menu appears.
 
 4. From the menu, select the system where you will deploy the `OPSVSCE` program.  (Refer to the description of **Backend Data Set** in the previous step.)    
-   When you select a system, OPS/REXX LS checks for an appropriate OPSVSCE SSH profile and deploys `OPSVSCE` to the data set you specified.
+   When you select a system, OPS/REXX LS checks for an appropriate OPSVSCE SSH profile (creating one with defaults if none exists) and deploys `OPSVSCE` to the specified data set, or to `<USERID>.OPSVSCE.REXX` if none is specified.
 
 The SSH connection to OPS/MVS is established. 
+
+When a command first requires automatic installation of the backend in the default data set, OPS/REXX LS asks for confirmation. Select **Install** to continue or **Use a different data set…** to specify an existing PDS. The selected PDS is saved in your SSH connection profile. Updates to an existing backend are installed automatically.
+
+If a host's SSH key changes, the connection is refused. To trust the replacement key, select **Re-trust**, verify the new fingerprint with your host administrator, and confirm it. Then retry the connection.
 
 > **Note**    
 > We recommend that you use the **OPS/MVS: Manage OPS/REXX LS SSH Connection Profiles** command and the VS Code UI to create or edit OPSVSCE SSH profiles. 
@@ -288,8 +292,8 @@ However, you may create a profile or edit it directly in `settings.json`.  To do
    **name** (Required)  
   The name of the profile, which must match a Zowe SSH profile name.
 
-   **deployDataset** (Required)  
-  The name of the data set in which to store `OPSVSCE`.
+   **deployDataset** (Optional)  
+  The name of an existing PDS in which to store `OPSVSCE` as a member. Defaults to the sequential data set `<USERID>.OPSVSCE.REXX`, which is created on first deploy.
 
    **defaultSubsystem** (Optional)  
   The default OPS/MVS subsystem to be used for requests made with this profile. Defaults to `OPSS`.
